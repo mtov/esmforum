@@ -1,0 +1,30 @@
+<%- include('header.html') -%>
+
+<div class="container mt-2">
+  <header>
+    <h2> Bem-vindo ao ESMForum </h2>
+    <p> Sistema de demonstração do livro Engenharia de Software Moderna </p>
+  </header>
+
+<section>
+  
+<h2> Perguntas </h2>
+
+<% if (perguntas.length===0) { %>
+  <p> No momento, ainda não existe nenhuma pergunta cadastrada!
+    <% } else { %>
+      <ol>
+        <% for (const p of perguntas) { %>
+          <li>
+            <%= p.texto %>
+          </li>
+          <% } %>
+      </ol>
+      <% } %>
+
+<p> Clique <a href="pergunta-cadastro.html">aqui</a> para cadastrar uma nova pergunta.</p>
+  
+</section>
+      
+<%- include('footer.html') -%>
+
