@@ -1,8 +1,7 @@
 import express from 'express';
-import { listar_perguntas, cadastrar_pergunta } from './model.js';
+import { listar_perguntas, cadastrar_pergunta } from './modelo.js';
 
-const app = express()
-const port = 3000
+const app = express();
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static('public'));
@@ -31,6 +30,8 @@ app.post('/pergunta', (req, res) => {
   } 
 });
 
+// espera e trata requisições de clientes
+const port = 3000;
 app.listen(port, () => {
   console.log(`ESMForum rodando na porta ${port}`)
 });

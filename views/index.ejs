@@ -1,30 +1,45 @@
 <%- include('header.html') -%>
 
-<div class="container mt-2">
-  <header>
-    <h2> Bem-vindo ao ESMForum </h2>
-    <p> Sistema de demonstração do livro Engenharia de Software Moderna </p>
-  </header>
-
 <section>
-  
-<h2> Perguntas </h2>
+
+<center>
+<h5> Perguntas Atuais </h5>
+</center>
 
 <% if (perguntas.length===0) { %>
   <p> No momento, ainda não existe nenhuma pergunta cadastrada!
     <% } else { %>
-      <ol>
+        <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Data</th>
+            <th scope="col">Pergunta</th>
+          </tr>
+        </thead>
+        <tbody>
         <% for (const p of perguntas) { %>
-          <li>
-            <%= p.texto %>
-          </li>
+          <tr>
+            <th scope="row"><%= p.id_pergunta %></th>
+            <td><%=p.data_criacao%></td>
+            <td><%=p.texto%></td>
+          </tr>        
           <% } %>
-      </ol>
+        </tbody>
+        </table>      
       <% } %>
 
-<p> Clique <a href="pergunta-cadastro.html">aqui</a> para cadastrar uma nova pergunta.</p>
-  
 </section>
-      
+
+<h5> Faça sua pergunta </h5>
+
+<section>
+  <form action="/pergunta" id="form" method="post">
+  </form>
+  <textarea rows="3" cols="50" name="pergunta" form="form"></textarea><br>
+  <input type="submit" form="form" value="Enviar">
+
+</section>
+
 <%- include('footer.html') -%>
 
