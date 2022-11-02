@@ -1,0 +1,47 @@
+<%- include('header.html') -%>
+
+<section>
+
+<h5> Pergunta <%=pergunta.id_pergunta%> </h5>
+
+<p><%=pergunta.texto%></p>
+
+<h5> Respostas </h5>
+
+<% if (respostas.length===0) { %>
+    <p> Ainda não temos respostas para essa pergunta!
+      <% } else { %>
+          <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Data</th>
+              <th scope="col">Resposta</th>
+            </tr>
+          </thead>
+          <tbody>
+          <% for (const res of respostas) { %>
+            <tr>
+              <th scope="row"><%= res.id_resposta %></th>
+              <td><%=res.data_criacao%></td>
+              <td><%=res.texto%></td>
+              </tr>        
+            <% } %>
+          </tbody>
+          </table>      
+        <% } %>
+  
+  </section>
+  
+  <h5> Dê a sua resposta </h5>
+  
+  <section>
+    <form action="/pergunta" id="form" method="post">
+    </form>
+    <textarea rows="3" cols="50" name="pergunta" form="form"></textarea><br>
+    <input type="submit" form="form" value="Enviar">
+  
+  </section>
+  
+  <%- include('footer.html') -%>
+  

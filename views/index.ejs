@@ -15,6 +15,7 @@
             <th scope="col">ID</th>
             <th scope="col">Data</th>
             <th scope="col">Pergunta</th>
+            <th scope="col">Respostas</th>
           </tr>
         </thead>
         <tbody>
@@ -23,6 +24,7 @@
             <th scope="row"><%= p.id_pergunta %></th>
             <td><%=p.data_criacao%></td>
             <td><%=p.texto%></td>
+            <td><a href="/respostas/?id_pergunta=<%=p.id_pergunta%>"><%=p.num_respostas%></a></td>
           </tr>        
           <% } %>
         </tbody>

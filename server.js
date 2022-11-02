@@ -1,5 +1,5 @@
 import express from 'express';
-import { listar_perguntas, cadastrar_pergunta } from './modelo.js';
+import { listar_perguntas, cadastrar_pergunta, get_pergunta, get_respostas } from './modelo.js';
 
 const app = express();
 
@@ -20,10 +20,28 @@ app.get('/', (req, res) => {
   }
 });
 
+
 app.post('/pergunta', (req, res) => {
   try {
     cadastrar_pergunta(req.body.pergunta);
     res.render('pergunta-sucesso');
+  }
+  catch(erro) {
+    res.status(500).json(erro.message); 
+  } 
+});
+
+
+app.get('/respostas', (req, res) => {
+  const id_pergunta = req.query.id_pergunta;
+  const pergunta = get_pergunta(id_pergunta);
+  const respostas = get_respostas(id_pergunta);
+  console.log('respostas' + respostas);
+  try {
+    res.render('respostas', {
+      pergunta: pergunta,
+      respostas: respostas
+    });
   }
   catch(erro) {
     res.status(500).json(erro.message); 
