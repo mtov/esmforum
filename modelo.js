@@ -2,15 +2,19 @@ import { bd_query, bd_queryAll, bd_exec } from './bd/bd_utils.js';
 
 function listar_perguntas() {
   
-  const perguntas = bd_queryAll('select * from perguntas order by data_criacao desc', []);
+  const perguntas = bd_queryAll('select * from perguntas', []);
   perguntas.forEach(pergunta => pergunta['num_respostas'] = get_num_respostas(pergunta['id_pergunta']));
   return perguntas;
 }
 
 function cadastrar_pergunta(texto) {
-  const data = new Date().toLocaleDateString();
-  const params = [texto, 1, data];
-  bd_exec('INSERT INTO perguntas (texto, id_usuario, data_criacao) VALUES(?, ?, ?)', params);
+  const params = [texto, 1];
+  bd_exec('INSERT INTO perguntas (texto, id_usuario) VALUES(?, ?)', params);
+}
+
+function cadastrar_resposta(id_pergunta, texto) {
+  const params = [id_pergunta, texto];
+  bd_exec('INSERT INTO respostas (id_pergunta, texto) VALUES(?, ?)', params);
 }
 
 function get_pergunta(id_pergunta) {
@@ -26,4 +30,4 @@ function get_num_respostas(id_pergunta) {
   return resultado['count(*)'];
 }
 
-export { listar_perguntas, cadastrar_pergunta, get_pergunta, get_respostas }
+export { listar_perguntas, cadastrar_pergunta, cadastrar_resposta, get_pergunta, get_respostas }

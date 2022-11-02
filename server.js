@@ -1,5 +1,5 @@
 import express from 'express';
-import { listar_perguntas, cadastrar_pergunta, get_pergunta, get_respostas } from './modelo.js';
+import { listar_perguntas, cadastrar_pergunta, cadastrar_resposta, get_pergunta, get_respostas } from './modelo.js';
 
 const app = express();
 
@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
 });
 
 
-app.post('/pergunta', (req, res) => {
+app.post('/perguntas', (req, res) => {
   try {
     cadastrar_pergunta(req.body.pergunta);
     res.render('pergunta-sucesso');
@@ -36,7 +36,6 @@ app.get('/respostas', (req, res) => {
   const id_pergunta = req.query.id_pergunta;
   const pergunta = get_pergunta(id_pergunta);
   const respostas = get_respostas(id_pergunta);
-  console.log('respostas' + respostas);
   try {
     res.render('respostas', {
       pergunta: pergunta,
@@ -48,8 +47,24 @@ app.get('/respostas', (req, res) => {
   } 
 });
 
+
+app.post('/respostas', (req, res) => {
+  try {
+    const id_pergunta = req.body.id_pergunta;
+    const resposta = req.body.resposta;
+    cadastrar_resposta(id_pergunta, resposta);
+    res.render('resposta-sucesso', {
+      id_pergunta: id_pergunta
+    });
+  }
+  catch(erro) {
+    res.status(500).json(erro.message); 
+  } 
+});
+
+
 // espera e trata requisições de clientes
 const port = 3000;
 app.listen(port, () => {
-  console.log(`ESMForum rodando na porta ${port}`)
+  console.log(`ESM Forum rodando na porta ${port}`)
 });

@@ -1,12 +1,16 @@
 # ESM Forum
 
-O **ESM Forum** é um sistema de demonstração do livro [Engenharia de Software Moderna](https://engsoftmoderna.info). O objetivo é permitir que os alunos tenham um contato prático com os conceitos estudados no livro. Ou seja:
+O **ESM Forum** é um sistema de demonstração do livro [Engenharia de Software Moderna](https://engsoftmoderna.info). 
+Ele é um fórum simples de perguntas e respostas. 
 
-* Trata-se de um projeto com **objetivo didático** e, por isso, **não temos a intenção de colocá-lo em produção**. 
+O objetivo do sistema é permitir que os alunos tenham um primeiro contato prático com os conceitos estudados no livro. Ou seja:
 
-* Também **não temos a intenção de implementar um sistema completo**, com todas as funcionalidades de um sistema real.
+* Trata-se de um sistema com objetivo totalmente didático e, por isso, não temos a intenção de colocá-lo em produção. 
 
-O sistema é um fórum simples de perguntas e respostas
+* Também não temos a intenção de implementar um sistema completo, com todas as funcionalidades de um sistema real. 
+
+* A interface do sistema é também muito simples e minimalista.
+
 
 ## Linguagens e Bibliotecas
 
@@ -20,7 +24,7 @@ O ESM Forum é implementado em JavaScript, usando:
   * Express, uma biblioteca para construção de aplicações Web em Node.js.
   * SQLite, um banco de dados relacional simples e implementado na forma de uma biblioteca.
   
-## Instalação
+## Para instalar o sistema
 
 Primeiro, clone o repositório:
 
@@ -36,9 +40,9 @@ sudo apt install sqlite3
 npm install better-sqlite3
 ```
 
-## Execução
+## Para executar o sistema
 
-Na primeira vez que for executar o sistema, é importante antes criar o banco de dados. Para isso, faça:
+Apenas na **primeira vez** que for executar o sistema, é importante **criar o banco de dados**. Para isso, faça:
 
 ```
 cd bd

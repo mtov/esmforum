@@ -14,18 +14,14 @@
           <table class="table table-striped">
           <thead>
             <tr>
-              <th scope="col">ID</th>
-              <th scope="col">Data</th>
-              <th scope="col">Resposta</th>
+              <th scope="col"></th>
             </tr>
           </thead>
           <tbody>
           <% for (const res of respostas) { %>
             <tr>
-              <th scope="row"><%= res.id_resposta %></th>
-              <td><%=res.data_criacao%></td>
-              <td><%=res.texto%></td>
-              </tr>        
+              <td><%= res.texto%></th>
+            </tr>        
             <% } %>
           </tbody>
           </table>      
@@ -36,9 +32,10 @@
   <h5> Dê a sua resposta </h5>
   
   <section>
-    <form action="/pergunta" id="form" method="post">
+    <form action="/respostas" id="form" method="post">
+    <input type="hidden" id="form" name="id_pergunta" value="<%=pergunta.id_pergunta%>">    
     </form>
-    <textarea rows="3" cols="50" name="pergunta" form="form"></textarea><br>
+    <textarea rows="3" cols="50" name="resposta" form="form"></textarea><br>
     <input type="submit" form="form" value="Enviar">
   
   </section>

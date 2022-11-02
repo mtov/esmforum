@@ -13,7 +13,6 @@
         <thead>
           <tr>
             <th scope="col">ID</th>
-            <th scope="col">Data</th>
             <th scope="col">Pergunta</th>
             <th scope="col">Respostas</th>
           </tr>
@@ -22,7 +21,6 @@
         <% for (const p of perguntas) { %>
           <tr>
             <th scope="row"><%= p.id_pergunta %></th>
-            <td><%=p.data_criacao%></td>
             <td><%=p.texto%></td>
             <td><a href="/respostas/?id_pergunta=<%=p.id_pergunta%>"><%=p.num_respostas%></a></td>
           </tr>        
@@ -36,7 +34,7 @@
 <h5> Faça sua pergunta </h5>
 
 <section>
-  <form action="/pergunta" id="form" method="post">
+  <form action="/perguntas" id="form" method="post">
   </form>
   <textarea rows="3" cols="50" name="pergunta" form="form"></textarea><br>
   <input type="submit" form="form" value="Enviar">
