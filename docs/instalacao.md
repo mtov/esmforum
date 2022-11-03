@@ -1,4 +1,6 @@
-## Para instalar o sistema
+# ESM Forum
+
+## Instalação 
 
 Primeiro, clone o repositório:
 
@@ -14,7 +16,7 @@ sudo apt install sqlite3
 npm install better-sqlite3
 ```
 
-## Para executar o sistema
+## Execução 
 
 Apenas na **primeira vez** que for executar o sistema, é importante **criar o banco de dados**. Para isso, faça:
 
