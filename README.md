@@ -11,7 +11,11 @@ Ele é um fórum simples de perguntas e respostas. O objetivo é permitir que os
 
 ## Screenshots
 
+<p>Página principal, com a lista de perguntas:</p>
+
 ![Primeiro screenshot](./docs/screen1.png)
+
+<p> Página com as respostas para uma determinada pergunta:</p>
 
 ![Segundo screenshot](./docs/screen2.png)
 
