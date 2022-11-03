@@ -24,11 +24,11 @@ Apenas na **primeira vez** que for executar o sistema, é importante **criar o b
 cd bd
 ./criar_bd.sh
 ```
-Para executar o servidor, digite:
+Para executar o servidor, digite no diretório raiz:
 
 ``` node server.js```
 
-Para acessar o sistema, abre a seguinte URL no browser:
+Para acessar o sistema, abra a seguinte URL no browser:
 
 ``` http://localhost:3000 ```
 

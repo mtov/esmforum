@@ -6,10 +6,14 @@ O **ESM Forum** é um sistema de demonstração do livro [Engenharia de Software
 Ele é um fórum simples de perguntas e respostas. O objetivo é permitir que os alunos tenham um primeiro contato prático com os conceitos estudados no livro. Ou seja:
 
 * Trata-se de um sistema com objetivo didático e, por isso, não temos a intenção de colocá-lo em produção. 
-
 * Também não temos a intenção de implementar um sistema completo, com todas as funcionalidades possíveis. 
+* A interface Web do sistema é também simples e minimalista.
 
-* A interface do sistema é também simples e minimalista.
+## Screenshots
+
+![Primeiro screenshot](./docs/screen1.png)
+
+![Segundo screenshot](./docs/screen2.png)
 
 ## Tecnologias
 
