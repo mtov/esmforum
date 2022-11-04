@@ -11,9 +11,11 @@ Ele é um fórum simples de perguntas e respostas. O objetivo é permitir que os
 
 ## Screenshots
 
-<p>Página principal, com a lista de perguntas:</p>
+<p> Página principal, com a lista de perguntas:</p>
 
 ![Primeiro screenshot](./docs/screen1.png)
+
+<br>
 
 <p> Página com as respostas para uma determinada pergunta:</p>
 
@@ -32,4 +34,5 @@ O ESM Forum é implementado em JavaScript, usando:
 ## Documentação
 
 * [Instalação e Execução](docs/instalacao.md)
+* [Histórias de Usuários e Backlogs](https://github.com/users/mtov/projects/1)
 
