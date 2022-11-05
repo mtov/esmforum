@@ -31,8 +31,12 @@ O ESM Forum é implementado em JavaScript, usando:
   * EJS, uma linguagem baseada em JavaScript para criação de templates HTML.
   * SQLite, um banco de dados relacional simples.
 
-## Documentação
+## Instalação e Execução
 
-* [Instalação e Execução](docs/instalacao.md)
-* [Histórias de Usuários e Backlogs](https://github.com/users/mtov/projects/1) (usando GitHub Projects)
+Veja neste [link](docs/instalacao.md).
+
+## Praticando o Conteúdo do Livro
+
+* Cap. 2 (Processos) e Cap. 3 (Requisitos): veja as [histórias de usuários e backlog](https://github.com/users/mtov/projects/1) do projeto, criadas usando o GitHub Projects.
+
 
