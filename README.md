@@ -34,5 +34,5 @@ O ESM Forum é implementado em JavaScript, usando:
 ## Documentação
 
 * [Instalação e Execução](docs/instalacao.md)
-* [Histórias de Usuários e Backlogs](https://github.com/users/mtov/projects/1)
+* [Histórias de Usuários e Backlogs](https://github.com/users/mtov/projects/1) (usando GitHub Projects)
 
