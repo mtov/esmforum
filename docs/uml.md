@@ -13,13 +13,15 @@
         activate bd_utils
         bd_utils-->>modelo: perguntas
         deactivate bd_utils
-	activate modelo
-	modelo->>modelo: get_num_respostas(id_pergunta)
-	modelo->>bd_utils: bd_query()
-        activate bd_utils
-        bd_utils-->>modelo: num_respostas
-        deactivate bd_utils
-	deactivate modelo
+	loop Para cada pergunta
+	  activate modelo
+	  modelo->>modelo: get_num_respostas(id_pergunta)
+	  modelo->>bd_utils: bd_query()
+          activate bd_utils
+          bd_utils-->>modelo: num_respostas
+          deactivate bd_utils
+	  deactivate modelo
+	end  
         modelo-->>server: perguntas, num_respostas
         deactivate modelo
 	server-->>browser: index
