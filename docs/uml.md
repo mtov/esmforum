@@ -2,17 +2,17 @@
 ```mermaid
     sequenceDiagram
         activate Browser
-	Browser->>/perguntas: POST
-        activate /perguntas
-        /perguntas->>Modelo: listar_perguntas()
-        activate Modelo
-        Modelo->>bd_utils: bd_queryAll()
+	browser->>server: POSTperguntas 
+        activate server
+        server->>modelo: listar_perguntas()
+        activate modelo
+        modelo->>bd_utils: bd_queryAll()
         activate bd_utils
-        bd_utils-->>Modelo: perguntas
+        bd_utils-->>modelo: perguntas
         deactivate bd_utils
-        Modelo-->>/perguntas: perguntas
-        deactivate Modelo
-	/perguntas-->>Browser: index.ejs
-	deactivate /perguntas
-	deactivate Browser
+        modelo-->>server: perguntas
+        deactivate server
+	server-->>browser: index
+	deactivate server
+	deactivate browser
 ```	
