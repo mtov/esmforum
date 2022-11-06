@@ -31,9 +31,9 @@
         activate modelo
         modelo->>bd_utils: bd_exec()
         activate bd_utils
-        bd_utils-->>modelo
+        bd_utils-->>modelo: return
         deactivate bd_utils
-        modelo-->>server
+        modelo-->>server: return
         deactivate modelo
 	server-->>browser: pergunta-sucesso
 	deactivate server
