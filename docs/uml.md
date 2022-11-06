@@ -1,7 +1,7 @@
 
 ```mermaid
     sequenceDiagram
-        activate Browser
+        activate browser
 	browser->>server: POSTperguntas 
         activate server
         server->>modelo: listar_perguntas()
@@ -11,7 +11,7 @@
         bd_utils-->>modelo: perguntas
         deactivate bd_utils
         modelo-->>server: perguntas
-        deactivate server
+        deactivate modelo
 	server-->>browser: index
 	deactivate server
 	deactivate browser
