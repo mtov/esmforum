@@ -27,7 +27,7 @@
         activate browser
 	browser->>server: POST perguntas 
         activate server
-        server->>modelo: cadastr_pergunta()
+        server->>modelo: cadastar_pergunta()
         activate modelo
         modelo->>bd_utils: bd_exec()
         activate bd_utils
