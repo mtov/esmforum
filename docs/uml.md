@@ -1,6 +1,8 @@
 
 ```mermaid
     sequenceDiagram
+        activate Browser
+	Browser->>/perguntas: POST
         activate /perguntas
         /perguntas->>Modelo: listar_perguntas()
         activate Modelo
@@ -11,4 +13,5 @@
         Modelo-->>/perguntas: perguntas
         deactivate Modelo
 	deactivate /perguntas
+	deactivate Browser
 ```	
