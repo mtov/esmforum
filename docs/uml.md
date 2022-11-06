@@ -82,7 +82,7 @@
 ```mermaid
     sequenceDiagram
         activate browser
-	browser->>server: POST perguntas 
+	browser->>server: POST respostas
         activate server
         server->>modelo: cadastar_resposta(id_pergunta, resposta)
         activate modelo
