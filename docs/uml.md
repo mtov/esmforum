@@ -36,7 +36,7 @@
         activate browser
 	browser->>server: POST /perguntas 
         activate server
-        server->>modelo: cadastar_pergunta(pergunta)
+        server->>modelo: cadastrar_pergunta(pergunta)
         activate modelo
         modelo->>bd_utils: bd_exec()
         activate bd_utils
@@ -84,7 +84,7 @@
         activate browser
 	browser->>server: POST /respostas
         activate server
-        server->>modelo: cadastar_resposta(id_pergunta, resposta)
+        server->>modelo: cadastrar_resposta(id_pergunta, resposta)
         activate modelo
         modelo->>bd_utils: bd_exec()
         activate bd_utils
