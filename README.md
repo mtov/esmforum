@@ -1,7 +1,5 @@
 # ESM Forum
 
-## Visão Geral
-
 O **ESM Forum** é um sistema de demonstração do livro [Engenharia de Software Moderna](https://engsoftmoderna.info). 
 Ele é um fórum simples de perguntas e respostas. O objetivo é permitir que os alunos tenham um primeiro contato prático com os conceitos estudados no livro. Ou seja:
 
@@ -14,7 +12,7 @@ Veja a página principal do sistema:
 ![Primeiro screenshot](docs/screen1.png)
 
 
-<p> Se quiser, veja também a [página](docs/screen2.png) de respostas para uma pergunta.</p>
+Veja também a [página](docs/screen2.png) de respostas para uma pergunta.
 
 
 ## Tecnologias
@@ -33,7 +31,6 @@ Veja neste [link](docs/instalacao.md).
 
 ## Praticando o Conteúdo do Livro
 
-* Caps. 2 e 3: [histórias e backlog](https://github.com/users/mtov/projects/1), via GitHub Projects.
-
+* Cap. 2 e 3: [histórias e backlog](https://github.com/users/mtov/projects/1), via GitHub Projects.
 * Cap. 4: [diagramas de sequência](docs/uml.md), mostrando os principais fluxos de chamadas de funções do sistema.
 
