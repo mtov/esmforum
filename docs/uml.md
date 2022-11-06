@@ -12,7 +12,7 @@
         deactivate bd_utils
         Modelo-->>/perguntas: perguntas
         deactivate Modelo
-	deactivate /perguntas
 	/perguntas-->>Browser: index.ejs
+	deactivate /perguntas
 	deactivate Browser
 ```	
