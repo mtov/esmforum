@@ -1,15 +1,14 @@
 
 ```mermaid
     sequenceDiagram
-        activate Controllers
-        Controllers->>Models: comment.listAllComments()
-        activate Models
-        Models->>DB: dbQuery()
-        activate DB
-        DB-->>Models: Comment[ ]
-        deactivate DB
-        Models-->>Controllers: Comment[ ]
-        deactivate Models
-	deactivate Controllers
-
+        activate /perguntas
+        /perguntas->>Modelo: listar_perguntas()
+        activate Modelo
+        Modelo->>BD: bd_queryAll()
+        activate BD
+        BD-->>Modelo: perguntas
+        deactivate BD
+        Modelo-->>/perguntas: perguntas
+        deactivate Modelo
+	deactivate /perguntas
 ```	
