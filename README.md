@@ -9,17 +9,13 @@ Ele é um fórum simples de perguntas e respostas. O objetivo é permitir que os
 * Também não temos a intenção de implementar um sistema completo, com todas as funcionalidades possíveis. 
 * A interface Web do sistema é também simples e minimalista.
 
-## Screenshots
+Veja a página principal do sistema:
 
-<p> Página principal, com a lista de perguntas:</p>
+![Primeiro screenshot](docs/screen1.png)
 
-![Primeiro screenshot](./docs/screen1.png)
 
-<br>
+<p> Se quiser, veja também a [página](docs/screen2.png) de respostas para uma pergunta.</p>
 
-<p> Página com as respostas para uma determinada pergunta:</p>
-
-![Segundo screenshot](./docs/screen2.png)
 
 ## Tecnologias
 
@@ -37,6 +33,7 @@ Veja neste [link](docs/instalacao.md).
 
 ## Praticando o Conteúdo do Livro
 
-* Caps. 2 e 3; [histórias de usuários e o backlog](https://github.com/users/mtov/projects/1) do ESM Forum, os quais criados usando o GitHub Projects.
+* Caps. 2 e 3: [histórias e backlog](https://github.com/users/mtov/projects/1), via GitHub Projects.
 
-* Cap. 4: [Diagramas de sequência](docs/uml.md), mostrando os principais fluxos de chamdadas de funções do sistema.
+* Cap. 4: [diagramas de sequência](docs/uml.md), mostrando os principais fluxos de chamadas de funções do sistema.
+
