@@ -13,12 +13,14 @@
         activate bd_utils
         bd_utils-->>modelo: perguntas
         deactivate bd_utils
+	activate modelo
 	modelo->>modelo: get_num_respostas(id_pergunta)
 	modelo->>bd_utils: bd_query()
         activate bd_utils
         bd_utils-->>modelo: num
         deactivate bd_utils
-        modelo-->>server: perguntas,num
+	deactivate modelo
+        modelo-->>server: perguntas
         deactivate modelo
 	server-->>browser: index
 	deactivate server
