@@ -36,7 +36,7 @@
         activate browser
 	browser->>server: POST perguntas 
         activate server
-        server->>modelo: cadastar_pergunta()
+        server->>modelo: cadastar_pergunta(pergunta)
         activate modelo
         modelo->>bd_utils: bd_exec()
         activate bd_utils
@@ -77,3 +77,22 @@
 	deactivate browser
 ```	
 
+## Cadastrar Resposta
+
+```mermaid
+    sequenceDiagram
+        activate browser
+	browser->>server: POST perguntas 
+        activate server
+        server->>modelo: cadastar_resposta(id_pergunta, resposta)
+        activate modelo
+        modelo->>bd_utils: bd_exec()
+        activate bd_utils
+        bd_utils-->>modelo: return
+        deactivate bd_utils
+        modelo-->>server: return
+        deactivate modelo
+	server-->>browser: resposta-sucesso
+	deactivate server
+	deactivate browser
+```	
