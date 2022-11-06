@@ -13,7 +13,12 @@
         activate bd_utils
         bd_utils-->>modelo: perguntas
         deactivate bd_utils
-        modelo-->>server: perguntas
+	modelo->>modelo: get_num_respostas(id_pergunta)
+	modelo->>bd_utils: bd_query()
+        activate bd_utils
+        bd_utils-->>modelo: num
+        deactivate bd_utils
+        modelo-->>server: perguntas,num
         deactivate modelo
 	server-->>browser: index
 	deactivate server
@@ -47,15 +52,15 @@
         activate browser
 	browser->>server: GET /respostas
         activate server
-        server->>modelo: get_pergunta()
+        server->>modelo: get_pergunta(id_pergunta)
         activate modelo
         modelo->>bd_utils: bd_query()
         activate bd_utils
         bd_utils-->>modelo: pergunta
         deactivate bd_utils
-        modelo-->>server: perguntas
+        modelo-->>server: pergunta
         deactivate modelo
-	server->>modelo: get_respostas()
+	server->>modelo: get_respostas(id_pergunta)
         activate modelo
         modelo->>bd_utils: bd_queryAll()
         activate bd_utils
