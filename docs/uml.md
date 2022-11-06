@@ -2,7 +2,7 @@
 ```mermaid
     sequenceDiagram
         activate browser
-	browser->>server: POSTperguntas 
+	browser->>server: POST perguntas 
         activate server
         server->>modelo: listar_perguntas()
         activate modelo
