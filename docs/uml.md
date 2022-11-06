@@ -13,5 +13,6 @@
         Modelo-->>/perguntas: perguntas
         deactivate Modelo
 	deactivate /perguntas
+	/perguntas-->>Browser: index.ejs
 	deactivate Browser
 ```	
