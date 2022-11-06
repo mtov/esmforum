@@ -40,3 +40,31 @@
 	deactivate browser
 ```	
 
+## Listar Respostas (de uma Pergunta)
+
+```mermaid
+    sequenceDiagram
+        activate browser
+	browser->>server: GET /respostas
+        activate server
+        server->>modelo: get_pergunta()
+        activate modelo
+        modelo->>bd_utils: bd_query()
+        activate bd_utils
+        bd_utils-->>modelo: pergunta
+        deactivate bd_utils
+        modelo-->>server: perguntas
+        deactivate modelo
+	server->>modelo: get_respostas()
+        activate modelo
+        modelo->>bd_utils: bd_queryAll()
+        activate bd_utils
+        bd_utils-->>modelo: respostas
+        deactivate bd_utils
+        modelo-->>server: respostas
+        deactivate modelo
+	server-->>browser: respostas
+	deactivate server
+	deactivate browser
+```	
+
