@@ -37,6 +37,6 @@ Veja neste [link](docs/instalacao.md).
 
 ## Praticando o Conteúdo do Livro
 
-* Cap. 2 (Processos) e Cap. 3 (Requisitos): veja as [histórias de usuários e backlog](https://github.com/users/mtov/projects/1) do projeto, criadas usando o GitHub Projects.
+* Caps. 2 e 3; [histórias de usuários e o backlog](https://github.com/users/mtov/projects/1) do ESM Forum, os quais criados usando o GitHub Projects.
 
-
+* Cap. 4: [Diagramas de sequência](docs/uml.md), mostrando os principais fluxos de chamdadas de funções do sistema.
