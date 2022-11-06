@@ -34,7 +34,7 @@
 ```mermaid
     sequenceDiagram
         activate browser
-	browser->>server: POST perguntas 
+	browser->>server: POST /perguntas 
         activate server
         server->>modelo: cadastar_pergunta(pergunta)
         activate modelo
@@ -49,7 +49,7 @@
 	deactivate browser
 ```	
 
-## Listar Respostas (de uma Pergunta)
+## Listar Respostas (de uma pergunta)
 
 ```mermaid
     sequenceDiagram
@@ -82,7 +82,7 @@
 ```mermaid
     sequenceDiagram
         activate browser
-	browser->>server: POST respostas
+	browser->>server: POST /respostas
         activate server
         server->>modelo: cadastar_resposta(id_pergunta, resposta)
         activate modelo
