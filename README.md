@@ -28,6 +28,6 @@ Veja neste [link](docs/instalacao.md).
 
 ## Praticando o Conteúdo do Livro
 
-* Cap. 2 e 3: [histórias e backlog](https://github.com/users/mtov/projects/1), via GitHub Projects.
-* Cap. 4: [diagramas de sequência](docs/uml.md), mostrando os principais fluxos de chamadas de funções do sistema.
-
+* [Histórias de Usuários e backlog](https://github.com/users/mtov/projects/1), via GitHub Projects.
+* [Arquitetura](docs/arquitetura.md), a qual segue o padrão MVC.
+* [Diagramas de sequência](docs/uml.md), mostrando os principais fluxos de chamadas de funções do sistema.
