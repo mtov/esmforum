@@ -1,5 +1,5 @@
-const modelo = require('../modelo.js');
 const bd = require('../bd/bd_utils.js');
+const modelo = require('../modelo.js');
 
 beforeEach(() => {
   // banco de dados de teste
