@@ -18,6 +18,7 @@ O sistema é implementado em JavaScript, usando:
   * [Express](https://expressjs.com), uma biblioteca para construção de aplicações Web em Node.js.
   * [EJS](https://ejs.co), uma linguagem baseada em JavaScript para criação de templates HTML.
   * [SQLite](https://www.sqlite.org), um banco de dados relacional simples.
+  * [Jest](https://jestjs.io/), um framework para implementação de testes de unidade e de integração.
 
 ## Instalação e Execução
 
@@ -26,5 +27,6 @@ Veja neste [link](docs/instalacao.md).
 ## Praticando o Conteúdo do Livro
 
 * [Histórias de Usuários e Backlog](https://github.com/users/mtov/projects/1), via GitHub Projects.
-* [Arquitetura](docs/arquitetura.md), a qual segue o padrão MVC.
-* [Diagramas de Sequência](docs/uml.md), mostrando os principais fluxos de chamadas de funções do sistema.
+* [Arquiteturas MVC](docs/arquitetura.md)
+* [Diagramas de Sequência](docs/uml.md)
+* [Testes de Integração](docs/testes.md), usando Jest.

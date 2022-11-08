@@ -14,6 +14,7 @@ Instale também as seguintes dependências:
 sudo apt update
 sudo apt install sqlite3 
 npm install better-sqlite3
+npm install --save-dev jest
 ```
 
 ## Execução 

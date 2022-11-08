@@ -1,6 +1,8 @@
 # Diagramas de Sequência
 
-Para saber mais sobre diagramas de sequência, recomendamos o [Capítulo 4](https://engsoftmoderna.info/cap4.html#diagrama-de-sequ%C3%AAncia) do livro.
+Veja a seguir alguns diagramas de sequência para as operações principais do sistema.
+Para saber mais sobre esses diagramas, recomendamos o [Capítulo 4](https://engsoftmoderna.info/cap4.html#diagrama-de-sequ%C3%AAncia) do livro.
+
 ## Listar Perguntas
 
 ```mermaid
@@ -10,14 +12,14 @@ Para saber mais sobre diagramas de sequência, recomendamos o [Capítulo 4](http
         activate server
         server->>modelo: listar_perguntas()
         activate modelo
-        modelo->>bd_utils: bd_queryAll()
+        modelo->>bd_utils: queryAll()
         activate bd_utils
         bd_utils-->>modelo: perguntas
         deactivate bd_utils
 	loop Para cada pergunta
 	  activate modelo
 	  modelo->>modelo: get_num_respostas(id_pergunta)
-	  modelo->>bd_utils: bd_query()
+	  modelo->>bd_utils: query()
           activate bd_utils
           bd_utils-->>modelo: num_respostas
           deactivate bd_utils
@@ -39,7 +41,7 @@ Para saber mais sobre diagramas de sequência, recomendamos o [Capítulo 4](http
         activate server
         server->>modelo: cadastrar_pergunta(pergunta)
         activate modelo
-        modelo->>bd_utils: bd_exec()
+        modelo->>bd_utils: exec()
         activate bd_utils
         bd_utils-->>modelo: return
         deactivate bd_utils
@@ -59,7 +61,7 @@ Para saber mais sobre diagramas de sequência, recomendamos o [Capítulo 4](http
         activate server
         server->>modelo: get_pergunta(id_pergunta)
         activate modelo
-        modelo->>bd_utils: bd_query()
+        modelo->>bd_utils: query()
         activate bd_utils
         bd_utils-->>modelo: pergunta
         deactivate bd_utils
@@ -67,7 +69,7 @@ Para saber mais sobre diagramas de sequência, recomendamos o [Capítulo 4](http
         deactivate modelo
 	server->>modelo: get_respostas(id_pergunta)
         activate modelo
-        modelo->>bd_utils: bd_queryAll()
+        modelo->>bd_utils: queryAll()
         activate bd_utils
         bd_utils-->>modelo: respostas
         deactivate bd_utils
@@ -87,7 +89,7 @@ Para saber mais sobre diagramas de sequência, recomendamos o [Capítulo 4](http
         activate server
         server->>modelo: cadastrar_resposta(id_pergunta, resposta)
         activate modelo
-        modelo->>bd_utils: bd_exec()
+        modelo->>bd_utils: exec()
         activate bd_utils
         bd_utils-->>modelo: return
         deactivate bd_utils

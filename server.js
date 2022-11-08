@@ -1,7 +1,9 @@
-import express from 'express';
-import { listar_perguntas, cadastrar_pergunta, cadastrar_resposta, get_pergunta, get_respostas } from './modelo.js';
+const express = require('express')
+const app = express()
 
-const app = express();
+const modelo = require('./modelo.js');
+
+//const app = express();
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static('public'));
@@ -10,7 +12,7 @@ app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
   try {
-    const perguntas = listar_perguntas();
+    const perguntas = modelo.listar_perguntas();
     res.render('index', {
       perguntas: perguntas
     });
@@ -20,10 +22,9 @@ app.get('/', (req, res) => {
   }
 });
 
-
 app.post('/perguntas', (req, res) => {
   try {
-    cadastrar_pergunta(req.body.pergunta);
+    modelo.cadastrar_pergunta(req.body.pergunta);
     res.render('pergunta-sucesso');
   }
   catch(erro) {
@@ -31,11 +32,10 @@ app.post('/perguntas', (req, res) => {
   } 
 });
 
-
 app.get('/respostas', (req, res) => {
   const id_pergunta = req.query.id_pergunta;
-  const pergunta = get_pergunta(id_pergunta);
-  const respostas = get_respostas(id_pergunta);
+  const pergunta = modelo.get_pergunta(id_pergunta);
+  const respostas = modelo.get_respostas(id_pergunta);
   try {
     res.render('respostas', {
       pergunta: pergunta,
@@ -47,12 +47,11 @@ app.get('/respostas', (req, res) => {
   } 
 });
 
-
 app.post('/respostas', (req, res) => {
   try {
     const id_pergunta = req.body.id_pergunta;
     const resposta = req.body.resposta;
-    cadastrar_resposta(id_pergunta, resposta);
+    modelo.cadastrar_resposta(id_pergunta, resposta);
     res.render('resposta-sucesso', {
       id_pergunta: id_pergunta
     });
@@ -61,7 +60,6 @@ app.post('/respostas', (req, res) => {
     res.status(500).json(erro.message); 
   } 
 });
-
 
 // espera e trata requisições de clientes
 const port = 3000;
