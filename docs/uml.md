@@ -1,5 +1,6 @@
 # Diagramas de Sequência
 
+Para saber mais sobre diagramas de sequência, recomendamos o [Capítulo 4](https://engsoftmoderna.info/cap4.html#diagrama-de-sequ%C3%AAncia) do livro.
 ## Listar Perguntas
 
 ```mermaid

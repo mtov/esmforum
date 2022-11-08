@@ -5,16 +5,13 @@ Ele é um fórum simples de perguntas e respostas. O objetivo é permitir que os
 
 * Trata-se de um sistema com objetivo didático e, por isso, não temos a intenção de colocá-lo em produção. 
 * Também não temos a intenção de implementar um sistema completo, com todas as funcionalidades possíveis. 
-* A interface Web do sistema é também muito simples.
-
-Veja a página principal do sistema:
+* A interface Web do sistema é também muito simples, conforme mostrado abaixo.
 
 ![Primeiro screenshot](docs/screen1.png)
 
-
 ## Tecnologias
 
-O ESM Forum é implementado em JavaScript, usando:
+O sistema é implementado em JavaScript, usando:
 
   * [Bootstrap](https://getbootstrap.com), um framework para construção de interfaces Web em HTML e CSS.
   * [Node.js](https://nodejs.org/en), um sistema que permite a execução de programas JavaScript fora de browsers, isto é, em servidores.
@@ -28,6 +25,6 @@ Veja neste [link](docs/instalacao.md).
 
 ## Praticando o Conteúdo do Livro
 
-* [Histórias de Usuários e backlog](https://github.com/users/mtov/projects/1), via GitHub Projects.
+* [Histórias de Usuários e Backlog](https://github.com/users/mtov/projects/1), via GitHub Projects.
 * [Arquitetura](docs/arquitetura.md), a qual segue o padrão MVC.
-* [Diagramas de sequência](docs/uml.md), mostrando os principais fluxos de chamadas de funções do sistema.
+* [Diagramas de Sequência](docs/uml.md), mostrando os principais fluxos de chamadas de funções do sistema.
