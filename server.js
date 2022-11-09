@@ -1,13 +1,10 @@
 const express = require('express')
-const app = express()
-
 const modelo = require('./modelo.js');
 
-//const app = express();
-
+const app = express()
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static('public'));
-app.set('views', './views');
+app.set('views', './visao');
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {

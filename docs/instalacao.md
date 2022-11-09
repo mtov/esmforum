@@ -1,6 +1,4 @@
-# ESM Forum
-
-## Instalação 
+# Instalação 
 
 Primeiro, clone o repositório:
 
@@ -17,7 +15,7 @@ npm install better-sqlite3
 npm install --save-dev jest
 ```
 
-## Execução 
+# Execução 
 
 Apenas na **primeira vez** que for executar o sistema, é importante **criar o banco de dados**. Para isso, faça:
 

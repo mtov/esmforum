@@ -26,7 +26,7 @@ Veja neste [link](docs/instalacao.md).
 
 ## Praticando o Conteúdo do Livro
 
-* [Histórias de Usuários e Backlog](https://github.com/users/mtov/projects/1), via GitHub Projects.
+* [Histórias de Usuários e Backlog](https://github.com/users/mtov/projects/1), via GitHub Projects
 * [Arquiteturas MVC](docs/arquitetura.md)
 * [Diagramas de Sequência](docs/uml.md)
-* [Testes de Integração](docs/testes.md), usando Jest.
+* [Testes de Integração](docs/testes.md), usando Jest
