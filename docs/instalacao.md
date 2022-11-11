@@ -12,12 +12,11 @@ Instale também as seguintes dependências:
 npm install better-sqlite3
 npm install --save-dev jest
 ```
-Você também, precisará instalar o ```sqlite3```. Verifique no site da sua distribuição qual é o pacote apropriado que se refere a ele. Por exemplo, para distribuições debian (ubuntu, popOS, debian), fazemos apenas:
+Você precisará instalar também o ```sqlite3```. Verifique no site da sua distribuição qual é o pacote apropriado para isso. Por exemplo, para distribuições Debian, fazemos apenas:
 
 ```console
 sudo apt install sqlite3
 ```
-
 
 # Execução 
 
