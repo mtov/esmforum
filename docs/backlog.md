@@ -8,7 +8,7 @@ Assumindo esse cenário, o backlog do produto, as hisórias de usuários e as ta
 
 ## Exercício
 
-No backlog do produto que pode ser visto no link acima, a história do topo é a seguinte:
+No backlog do produto contido no link acima, a história do topo é a seguinte:
 
 > Como usuário, eu gostaria de editar e deletar minhas perguntas
 
@@ -18,4 +18,4 @@ Faça então o que se pede abaixo:
 
 2. Proponha um conjunto de critérios para aceitação dessa história. Para conferir os critérios de aceitação das histórias do sprint 1, basta clicar nelas, na coluna Histórias do Sprint, no GitHub Projects.
 
-Se preferir, você pode criar um novo projeto no Projects, chamado ESM Forum - Sprint 2, e cadastrar essa história e suas tarefas nele, assim como fizemos para as histórias do primeiro sprint.
+Se preferir, você pode criar um novo projeto no Projects, chamado "ESM Forum - Sprint 2", e cadastrar essa história e suas tarefas nele, assim como fizemos para as histórias do primeiro sprint.

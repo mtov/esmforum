@@ -2,7 +2,7 @@
 
 O ESM Forum segue uma arquitetura MVC. Esse padrão arquitetural é explicado no [Capítulo 7](https://engsoftmoderna.info/cap7.html#arquitetura-mvc) do livro.
 
-A seguinte a arquitetura do sistema:
+A seguinte figura descreve a arquitetura do sistema:
 
 ```mermaid
 flowchart LR
@@ -33,15 +33,21 @@ flowchart LR
 
 O EJS é uma biblioteca usada para processar o código JavaScript embutido nas páginas da Visão. Com isso, a página que é enviada para o browser possui todos os dados que serão exibidos para os usuários, sem necessidade de qualquer processamento.
 
-Já o Express é usado para definir uma pequena API REST. Ou seja, na nossa arquitetura, graças ao Express, o controlador é um servidor Web que fica continuamente recebendo e tratando requisições HTTP enviadas por um browser. A API REST disponibilizada pelo controlador possui os seguintes endpoints:
+Já o Express é usado para definir uma pequena API REST. Ou seja, na nossa arquitetura, graças ao Express, o controlador é um servidor Web que fica continuamente recebendo e tratando requisições HTTP enviadas por um browser.
 
-* ``GET /``: usado para obter a página principal com a lista de perguntas.
+## API do Servidor
 
-* ``POST /perguntas``: usado para cadastrar uma pergunta.
+ A API REST disponibilizada pelo controlador (e implementada usado o Express) possui os seguintes endpoints:
 
-* ``GET /respostas/?id_pergunta=n``: usado para obter a lista de respostas de uma pergunta cujo identificador é `n`.
+* ``GET /``: usado para obter a página principal com a lista de perguntas. O resultado é uma pagina HTML resultante do processamento do arquivo de visão [index.ejs](../visao/index.ejs).
+
+* ``POST /perguntas``: usado para cadastrar uma pergunta. Ou seja, esse endpoint é usado para enviar informações do browser para o servidor. O texto propriamente dito da pergunta é enviado como um parâmetro, chamado `pergunta`, de um formulário.
+
+* ``GET /respostas/?id_pergunta=n``: usado para obter a lista de respostas de uma pergunta cujo identificador é `n`. O resultado é uma página HTML resultante do processamento do arquivo [respostas.ejs](../visao/respostas.ejs).
+Veja que o parâmetro está codificado na própria query, isto é, na própria URL do endpoint.
 
 * ``POST /respostas``: usado para cadastrar uma resposta para uma pergunta.
+Devem ser enviado dois parâmetros (*form-encoded*): `id_pergunta` (isto é, o id da pergunta que estamos respondendo) e `resposta` (isto é, o texto da resposta).
 
 ## Exercício
 
@@ -53,3 +59,5 @@ API REST e ver os resultados retornados.
 Outra opção de ferramenta é o [Postman](https://www.postman.com/).
 
 Qualquer que seja a ferramenta que usar, acesse e teste cada um dos endpoints acima. Mas antes se certifique de que o backend (``server.js``) está rodando.
+
+Observação: se tiver problemas de conexão entre o Thunder Client e o servidor, experimente trocar o endereço `localhost:3000` por `[::1]:3000`. Existem diversos posts na Internet que explicam melhor esse problema...
