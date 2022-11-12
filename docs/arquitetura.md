@@ -1,8 +1,8 @@
 # Arquitetura
 
-O ESM Forum segue uma arquitetura MVC. Este padrão arquitetural é explicado no [Capítulo 7](https://engsoftmoderna.info/cap7.html#arquitetura-mvc) do livro.
+O ESM Forum segue uma arquitetura MVC. Esse padrão arquitetural é explicado no [Capítulo 7](https://engsoftmoderna.info/cap7.html#arquitetura-mvc) do livro.
 
-A seguinte figura ilustra essa arquitetura:
+A seguinte a arquitetura do sistema:
 
 ```mermaid
 flowchart LR
@@ -11,15 +11,15 @@ flowchart LR
     Controlador <--> Visão
 ```
 
-Nesta arquitetura, temos os seguintes componentes:
+Nessa arquitetura, temos os seguintes componentes:
 
 * **Browser**, que exibe as páginas e realiza a interação com os usuários do sistema.
 
 * **Controlador**, que é responsável por toda a mediação entre o browser e o restante do sistema. Como o ESM Forum é muito simples, o controlador é implementado em um único arquivo, chamado [server.js](../server.js).
 
-* **Modelo**, que implementa a lógica e funções de negócio do sistema. Também cuida de recuperar e persistir as perguntas e respostas no banco de dados. No ESM Forum, o modelo é  implementado em um único arquivo, chamado [modelo.js](../modelo.js).
+* **Modelo**, que implementa a lógica e as funções de negócio do sistema. Também cuida de recuperar e persistir as perguntas e respostas no banco de dados. No ESM Forum, o modelo é  implementado em um único arquivo, chamado [modelo.js](../modelo.js).
 
-* **Visão**, que são as páginas exibidas no browser. Essas páginas não incluem apenas HTML, mas também código JavaScript, para, por exemplo, criar dinamicamente as tabelas de perguntas e respostas. As páginas da Visão estão no seguinte [diretório](../views).
+* **Visão**, que são as páginas exibidas no browser. Essas páginas incluem código HTML e também código JavaScript para, por exemplo, criar dinamicamente as tabelas de perguntas e respostas. As páginas da Visão estão no seguinte [diretório](../visao).
 
 * **Banco de dados**, que no caso do ESM Forum é o SQLite. O esquema do banco de dados está no arquivo [schema.sql](../bd/schema.sql).
 
@@ -43,3 +43,13 @@ Já o Express é usado para definir uma pequena API REST. Ou seja, na nossa arqu
 
 * ``POST /respostas``: usado para cadastrar uma resposta para uma pergunta.
 
+## Exercício
+
+Teste os endpoints acima usando uma ferramenta 
+como o [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client). 
+Ele é um plugin para o VS Code que permite submeter facilmente requisições para uma
+API REST e ver os resultados retornados. 
+
+Outra opção de ferramenta é o [Postman](https://www.postman.com/).
+
+Qualquer que seja a ferramenta que usar, acesse e teste cada um dos endpoints acima. Mas antes se certifique de que o backend (``server.js``) está rodando.
