@@ -1,3 +1,5 @@
 node_modules
 coverage
 .vscode
+testes/cypress/screenshots
+testes/cypress/videos

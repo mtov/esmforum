@@ -20,12 +20,6 @@ sudo apt install sqlite3
 
 # Execução 
 
-Apenas na **primeira vez** que for executar o sistema, é importante **criar o banco de dados**. Para isso, faça:
-
-```
-cd bd
-./criar_bd.sh
-```
 Para executar o servidor, digite no diretório raiz:
 
 ``` node server.js```
@@ -35,3 +29,9 @@ Para acessar o sistema, abra a seguinte URL no browser:
 ``` http://localhost:3000 ```
 
 
+Se em algum momento você quiser "zerar" o banco de dados do sistema, você pode usar:
+
+```
+cd bd
+./criar_bd.sh
+```
