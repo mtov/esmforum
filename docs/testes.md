@@ -1,8 +1,22 @@
 # Testes de Integração
 
-O ESM Forum possui alguns testes de integração, implementados usando o Jest. Esses testes estão no seguinte [arquivo](../testes/modelo.test.js).
+O ESM Forum possui alguns testes de integração, implementados usando o Jest. Eles estão no seguinte [arquivo](../testes/modelo.test.js).
 
-Para executá-los, digite na pasta raiz do projeto:
+Esses testes de integração testam a camada de modelo e o acesso da mesma ao banco de dados, conforme ilustrado a seguir:
+
+```mermaid
+flowchart LR
+    BD[(BD)]
+    Browser <--> Controlador <--> Modelo
+    Controlador <--> Visão
+    subgraph testes de integração
+    Modelo  <--> BD 
+    end
+```
+
+## Executando os testes de integração
+
+Digite na pasta raiz do projeto:
 
 ``npm test``
 
