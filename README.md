@@ -30,3 +30,4 @@ Veja neste [link](docs/instalacao.md).
 * [Arquitetura MVC](docs/arquitetura.md)
 * [Diagramas de Sequência](docs/uml.md)
 * [Testes de Integração](docs/testes.md)
+* [Testes End-to-End](docs/testes-e2e.md)

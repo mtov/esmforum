@@ -1,8 +1,16 @@
 # Testes de Integração
 
-O ESM Forum possui alguns testes de integração, implementados usando o Jest. Eles estão no seguinte [arquivo](../testes/modelo.test.js).
+O ESM Forum possui alguns testes de integração, implementados 
+usando o Jest. Para mais informações sobre este tipo de teste 
+consulte o 
+[Capítulo 8](https://engsoftmoderna.info/cap8.html#testes-de-integra%C3%A7%C3%A3o)
+do livro.
 
-Esses testes de integração testam a camada de modelo e o acesso da mesma ao banco de dados, conforme ilustrado a seguir:
+Os testes de integração estão implementados no seguinte 
+[arquivo](../testes/modelo.test.js).
+
+Eles verificam a camada de modelo e o acesso da mesma ao banco de 
+dados, conforme ilustrado a seguir:
 
 ```mermaid
 flowchart LR
@@ -26,6 +34,9 @@ Para ver a cobertura dos testes, digite:
 
 ## Exercício
 
-Após o rodar o comando acima, você vai perceber que a cobertura de comandos (Stmts) do arquivo `modelo.js` é de 78.94%.
+Após o rodar o comando acima, você vai perceber que a cobertura 
+de comandos (Stmts) do arquivo `modelo.js` é de 78.94%.
 
-Implemente então um ou mais casos de testes, sempre no arquivo [modelo.test.js](../testes/modelo.test.js), de forma que essa cobertura atinja 100%.
+Implemente então um ou mais casos de testes, sempre no 
+arquivo [modelo.test.js](../testes/modelo.test.js), de forma que 
+essa cobertura atinja 100%.
