@@ -2,7 +2,7 @@
 
 O ESM Forum possui alguns testes de integração, implementados usando o Jest. Eles estão no seguinte [arquivo](../testes/modelo.test.js).
 
-Esses testes de integração testam a camada de modelo e o acesso da mesma ao banco de dados, como ilustrado a seguir:
+Esses testes de integração testam a camada de modelo e o acesso da mesma ao banco de dados, conforme ilustrado a seguir:
 
 ```mermaid
 flowchart LR
