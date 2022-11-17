@@ -9,7 +9,7 @@ describe('Primeiro teste E2E do ESM Forum', () => {
     cy.get('input[type="submit"]').should('be.visible').click();
     cy.contains('Sua pergunta foi cadastrada com sucesso.').should('be.visible');
 
-    cy.visit('/')
+    cy.visit('/');
     cy.get('table').contains('Quanto é 1+1?');
   })
 })
