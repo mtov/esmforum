@@ -3,7 +3,7 @@
 O ESM Forum possui alguns testes end-to-end, também conhecidos como 
 testes de frontend ou testes de sistema.  Para mais informações, 
 consulte o 
-[Capítulo 8](https://engsoftmoderna.info/cap8.html#testes-de-sistema). Veja também a seguinte ilustração:
+[Capítulo 8](https://engsoftmoderna.info/cap8.html#testes-de-sistema). Veja também o seguinte diagrama, por meio do qual tentamos mostrar que esses testes cobrem todo o código do sistema (para entender melhor, você pode compará-lo com diagrama análogo para [testes de integração](./testes.md)).
 
 ```mermaid
 flowchart LR
