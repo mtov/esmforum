@@ -1,13 +1,13 @@
 # Testes de Integração
 
 O ESM Forum possui alguns testes de integração, implementados 
-usando o Jest. Para mais informações sobre este tipo de teste 
+usando o Jest. Para mais informações sobre esse tipo de teste 
 consulte o 
 [Capítulo 8](https://engsoftmoderna.info/cap8.html#testes-de-integra%C3%A7%C3%A3o)
 do livro.
 
-Os testes de integração estão implementados no seguinte 
-[arquivo](../testes/modelo.test.js).
+Os testes de integração estão implementados no arquivo
+[modelo.test.js](../testes/modelo.test.js).
 
 Eles verificam a camada de modelo e o acesso da mesma ao banco de 
 dados, conforme ilustrado a seguir:
