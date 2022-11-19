@@ -6,6 +6,15 @@ function listar_perguntas() {
   return perguntas;
 }
 
+/*
+* a função cadastrar_pergunta possui a seguinte especificação:
+* retorna um array de objetos, onde cada objeto possui a seguinte interface,
+* { id_pergunta: int
+*   texto: int
+*   id_usuario: int
+*   num_respostas: int }
+* 
+*/
 function cadastrar_pergunta(texto) {
   const params = [texto, 1];
   bd.exec('INSERT INTO perguntas (texto, id_usuario) VALUES(?, ?)', params);
