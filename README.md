@@ -31,3 +31,4 @@ Veja neste [link](docs/instalacao.md).
 * [Diagramas de Sequência](docs/uml.md)
 * [Testes de Integração](docs/testes.md)
 * [Testes End-to-End](docs/testes-e2e.md)
+* [Integração Contínua](docs/ci.md)

@@ -8,7 +8,7 @@ function listar_perguntas() {
 
 function cadastrar_pergunta(texto) {
   const params = [texto, 1];
-  // bd.exec('INSERT INTO perguntas (texto, id_usuario) VALUES(?, ?)', params);
+  bd.exec('INSERT INTO perguntas (texto, id_usuario) VALUES(?, ?)', params);
 }
 
 function cadastrar_resposta(id_pergunta, texto) {
