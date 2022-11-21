@@ -1,20 +1,17 @@
 const bd = require('./bd/bd_utils.js');
 
+// listar_perguntas retorna um array de objetos com os seguintes campos:
+// { id_pergunta: int
+//   texto: int
+//   id_usuario: int
+//   num_respostas: int 
+// }
 function listar_perguntas() {
   const perguntas = bd.queryAll('select * from perguntas', []);
   perguntas.forEach(pergunta => pergunta['num_respostas'] = get_num_respostas(pergunta['id_pergunta']));
   return perguntas;
 }
 
-/*
-* a função cadastrar_pergunta possui a seguinte especificação:
-* retorna um array de objetos, onde cada objeto possui a seguinte interface,
-* { id_pergunta: int
-*   texto: int
-*   id_usuario: int
-*   num_respostas: int }
-* 
-*/
 function cadastrar_pergunta(texto) {
   const params = [texto, 1];
   bd.exec('INSERT INTO perguntas (texto, id_usuario) VALUES(?, ?)', params);

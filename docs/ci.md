@@ -7,8 +7,7 @@ Com isso, após qualquer `push` ou qualquer submissão
 de um novo Pull Request, os [testes de integração](testes.md) serão automaticamente executados em servidores do próprio GitHub.
 
 Para conferir se a execução dos testes foi bem sucedida, consulte o menu 
-Actions da barra principal do GitHub ou clique
-[aqui](https://github.com/mtov/esmforum/actions).
+[Actions](https://github.com/mtov/esmforum/actions) da barra principal do GitHub.
 
 
 ## Arquivo de Configuração do GitHub Actions
@@ -16,7 +15,7 @@ Actions da barra principal do GitHub ou clique
 Para ver o arquivo de configuração do GitHub Actions, clique 
 [aqui](../.github/workflows/node.js.yml). 
 
-Esse arquivo possui duas seções principais.
+Conforme pode ver no arquivo, ele possui duas seções principais.
 
  Primeiro, na seção *on*, definimos que as tarefas (*jobs*) da integração contínua serão executadas quando chegar um push ou um PR no repositório. 
  
@@ -33,7 +32,7 @@ Esse arquivo possui duas seções principais.
 
 1. Faça uma pequena modificação no seu repositório local. Por exemplo, faça uma pequena atualização nos arquivos de documentação do ESM Forum, que estão na pasta [docs](.). Em seguida, execute os comandos `git add`, `git commit` e `git push`. 
 
-    Então, na página do repositório no GitHub, clique na opção Actions do menu principal. Você vai poder acessar um log com informações da execução do sistema de integração contínua.
+    Então, na página do repositório no GitHub, clique na opção Actions do menu principal. Você vai poder acessar um log com informações da execução do sistema de integração contínua. E verá que o seu `push` disparou a execução de um job para rodar os testes do ESM Forum. Um ícone verde indicará uma execução bem sucedida de tais testes.
 
 2. Agora, vamos introduzir um bug no código do ESM Forum. Por exemplo, no arquivo [modelo.js](../modelo.js), função `cadastrar_pergunta`, comente a segunda linha:
 
@@ -44,7 +43,7 @@ Esse arquivo possui duas seções principais.
     }
     ```
 
-    Dê agora um `git add`, `git commit` e `git push`, para enviar para o repositório um código com bug.
+    Dê agora um `git add`, `git commit` e `git push`, para enviar para o repositório o código com esse bug.
 
     Então, na página do repositório no GitHub, em Actions, inspecione o resultado da execução da integração contínua. Você vai perceber que ela não foi bem sucedida, conforme indicado por um ícone vermelho.
 
