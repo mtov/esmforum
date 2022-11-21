@@ -4,23 +4,38 @@ No repositório do ESM Forum, ativamos o sistema de integração contínua do
 GitHub, conhecido pelo nome de GitHub Actions.
 
 Com isso, após qualquer `push` ou qualquer submissão 
-de um novo Pull Request, os [testes de integração](testes.md)  
-serão automaticamente executados em servidores do próprio GitHub.
+de um novo Pull Request, os [testes de integração](testes.md) serão automaticamente executados em servidores do próprio GitHub.
 
-Para ver se a execução dos testes foi bem sucedida, consulte  
-meu Actions da barra principal do GitHub ou clique
+Para conferir se a execução dos testes foi bem sucedida, consulte o menu 
+Actions da barra principal do GitHub ou clique
 [aqui](https://github.com/mtov/esmforum/actions).
 
-Para ver o arquivo de configuração do GitHub Actions, clique 
-[aqui](../.github/workflows/node.js.yml).
 
-## Exercício
+## Arquivo de Configuração do GitHub Actions
+
+Para ver o arquivo de configuração do GitHub Actions, clique 
+[aqui](../.github/workflows/node.js.yml). 
+
+Esse arquivo possui duas seções principais.
+
+ Primeiro, na seção *on*, definimos que as tarefas (*jobs*) da integração contínua serão executadas quando chegar um push ou um PR no repositório. 
+ 
+ Já na segunda seção, chamada *jobs*, fazemos o seguinte:
+
+* definimos que os jobs serão executados pelo GitHub usando-se uma máquina virtual com o sistema operacional Ubuntu.
+
+* definimos que eles serão executados para três versões diferentes do Node.js (14, 16 e 18). Ou seja, o objetivo é garantir que nosso sistema funciona em qualquer uma dessas versões.
+
+* e, por fim, definimos que para executar os jobs deve-se fazer um checkout do repositório e então rodar os seguintes comandos: `npm ci` (que é similar a um `npm install`), 
+`npm build` (para executar algum script extra de instalação, caso exista) e, finalmente, `npm test` (para rodar os testes).
+
+## Exercícios
 
 1. Faça uma pequena modificação no seu repositório local. Por exemplo, faça uma pequena atualização nos arquivos de documentação do ESM Forum, que estão na pasta [docs](.). Em seguida, execute os comandos `git add`, `git commit` e `git push`. 
 
     Então, na página do repositório no GitHub, clique na opção Actions do menu principal. Você vai poder acessar um log com informações da execução do sistema de integração contínua.
 
-2. Agora, vamos introduzir um bug no código do ESM Forum. Por exemplo, vá no arquivo [modelo.js](../modelo.js) e na função `cadastrar_pergunta` comente a segunda linha, a qual faz o `insert` no BD.
+2. Agora, vamos introduzir um bug no código do ESM Forum. Por exemplo, no arquivo [modelo.js](../modelo.js), função `cadastrar_pergunta`, comente a segunda linha:
 
     ```javascript
     function cadastrar_pergunta(texto) {
@@ -31,6 +46,6 @@ Para ver o arquivo de configuração do GitHub Actions, clique
 
     Dê agora um `git add`, `git commit` e `git push`, para enviar para o repositório um código com bug.
 
-    Então, na página do repositório no GitHub, em Actions, inspecione o resultado da execução da integração contínua. Você vai perceber que a integração não foi bem sucedida, conforme indicado por um ícone vermelho.
+    Então, na página do repositório no GitHub, em Actions, inspecione o resultado da execução da integração contínua. Você vai perceber que ela não foi bem sucedida, conforme indicado por um ícone vermelho.
 
     Por último, para não deixar o repositório com um bug, volte o código para a versão de antes e faça um novo `push`.
