@@ -3,7 +3,7 @@
 O ESM Forum possui alguns testes end-to-end, também conhecidos como 
 testes de frontend ou testes de sistema.  Para mais informações, 
 consulte o 
-[Capítulo 8](https://engsoftmoderna.info/cap8.html#testes-de-sistema). Veja também o seguinte diagrama, por meio do qual tentamos mostrar que esses testes cobrem todo o código do sistema (para entender melhor, você pode compará-lo com o diagrama análogo para [testes de integração](./testes.md)).
+[Capítulo 8](https://engsoftmoderna.info/cap8.html#testes-de-sistema). Veja também o seguinte diagrama, por meio do qual tentamos mostrar que esses testes cobrem todo o código do sistema.
 
 ```mermaid
 flowchart LR
@@ -15,11 +15,16 @@ flowchart LR
     end
 ```
 
-Os testes end-to-end são implementados usando-se o Cypress e estão em 
-dois arquivos:
+Para entender melhor, você pode comparar o diagrama acima com o 
+diagrama análogo para [testes de integração](./testes.md)).
 
-* [spec1.js](../testes/cypress/integration/spec1.js): um teste usado apenas para checar se a execução do Cypress 
-está ocorrendo com sucesso.
+## Implementação
+
+Os testes end-to-end do ESM Forum são implementados usando-se o 
+Cypress e estão em dois arquivos:
+
+* [spec1.js](../testes/cypress/integration/spec1.js): um teste usado 
+apenas para checar se a execução do Cypress está ocorrendo com sucesso.
 
 * [spec2.js](../testes/cypress/integration/spec2.js): um teste mais 
 real e que testa o cadastro de uma pergunta.
