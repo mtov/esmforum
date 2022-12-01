@@ -16,7 +16,7 @@ flowchart LR
 ```
 
 Para entender melhor, você pode comparar o diagrama acima com o 
-diagrama análogo para [testes de integração](./testes.md)).
+diagrama análogo para [testes de integração](./testes.md).
 
 ## Implementação
 

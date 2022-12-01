@@ -10,7 +10,7 @@ Para conferir se a execução dos testes foi bem sucedida, consulte o menu
 [Actions](https://github.com/mtov/esmforum/actions) da barra principal do GitHub.
 
 
-## Arquivo de Configuração do GitHub Actions
+## Arquivo de Configuração
 
 Para ver o arquivo de configuração do GitHub Actions, clique 
 [aqui](../.github/workflows/node.js.yml). 
@@ -58,4 +58,4 @@ que estão na pasta [docs](.). Em seguida, execute os comandos
 
     Então, na página do repositório no GitHub, em Actions, inspecione o resultado da execução da integração contínua. Você vai perceber que ela não foi bem sucedida, conforme indicado por um ícone vermelho.
 
-    Por último, para não deixar o repositório com um bug, volte o código para a versão de antes e faça um novo `push`.
+    Por último, para não deixar o repositório com um bug, volte o código para a versão anterior e faça um novo `push`.

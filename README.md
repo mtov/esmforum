@@ -29,6 +29,7 @@ Veja neste [link](docs/instalacao.md).
 * [Histórias de Usuários e Backlog](docs/backlog.md)
 * [Arquitetura MVC](docs/arquitetura.md)
 * [Diagramas de Sequência](docs/uml.md)
-* [Testes de Integração](docs/testes.md)
+* [Testes de Unidade](docs/testes-unidade.md)
+* [Testes de Integração](docs/testes-integracao.md)
 * [Testes End-to-End](docs/testes-e2e.md)
 * [Integração Contínua](docs/ci.md)
