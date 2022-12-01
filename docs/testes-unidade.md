@@ -15,9 +15,9 @@ Para executar o teste de unidade, basta digitar na pasta raiz do projeto:
 A implementação original de [listar_perguntas](../modelo.js) faz duas coisas:
 
 * Chama a função `queryAll` para recuperar todas as perguntas cadastradas no sistema. Veja que para isso a implementação de `queryAll` acessa o BD.
-* Depois, para cada pergunta, chama a função `get_num_respostas` para recuperar seu número de respostas e adiciona essa informação na lista de perguntas que será retornada.
+* Depois, para cada pergunta, chama a função `query` para recuperar seu número de respostas. Essa informação é então adicionada na lista de perguntas que será retornada.
 
 Então, no teste de unidade, nós realizamos o **mock** de:
 
 * `queryAll` para retornar sempre uma lista conhecida e fixa de respostas.
-* `get_num_respostas` para retornar sempre zero. Ou seja, no teste de `listar_perguntas` vamos assumir que todas as perguntas ainda estão sem respostas.
+* `query` para retornar sempre zero. Ou seja, no teste de `listar_perguntas` vamos assumir que todas as perguntas ainda estão sem respostas.
