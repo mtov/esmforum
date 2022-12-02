@@ -25,12 +25,16 @@ mock_bd.queryAll = jest.fn().mockReturnValue(
 );
 
 // Define função mockada de bd.queryAll.
-// Estamos supondo que todas as perguntas possuem 5 respostas.
-// Logo, quando "listar_perguntas" realizar uma query para obter
+// Quando "listar_perguntas" realizar uma query para obter
 // o número de respostas de qualquer pergunta, o resultado será
-// um objeto com um contador de respostas igual a 5
-mock_bd.query = jest.fn().mockReturnValue({ 'count(*)': 5 });
-
+// um objeto com um contador de respostas igual a 5, 10 e 15,
+// respectivamente para cada chamada
+mock_bd.query = jest.fn()
+  .mockReturnValue({ 'count(*)': 0 })       // todas chamadas
+  .mockReturnValueOnce({ 'count(*)': 5 })   // exceto, 1a chamada
+  .mockReturnValueOnce({ 'count(*)': 10 })  // exceto, 2a chamada
+  .mockReturnValueOnce({ 'count(*)': 15 })  // exceto, 3a chamada
+  
 // reconfigura o modelo para usar a versão mockada do BD
 modelo.reconfig_bd(mock_bd);
 
@@ -41,7 +45,7 @@ test('Testando listar três perguntas', () => {
   expect(perguntas[1].texto).toBe('Qual a capital de RJ?');
   expect(perguntas[2].texto).toBe('Qual a capital de SP?');
   expect(perguntas[0].num_respostas).toBe(5);
-  expect(perguntas[1].num_respostas).toBe(5);
-  expect(perguntas[2].num_respostas).toBe(5);
+  expect(perguntas[1].num_respostas).toBe(10);
+  expect(perguntas[2].num_respostas).toBe(15);
 });
   
