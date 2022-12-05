@@ -69,8 +69,7 @@ Repositórios facilitam a escrita de testes de unidade, pois
 podemos criar um novo tipo de repositório que sempre manipula e recupera dados em memória principal. Sendo mais específico, 
 teríamos dois tipos de repositórios: `RepositoriBD` e
 `RepositorioMemória`, sendo que esse última manipula apenas 
-algumas poucas perguntas e será utilizado apenas quando o Modelo 
-for chamado pelos testes de unidade.
+algumas poucas perguntas e será utilizado apenas quando o Modelo for chamado pelos testes de unidade.
 
 ```mermaid
 flowchart LR
