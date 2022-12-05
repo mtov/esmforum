@@ -57,7 +57,7 @@ flowchart LR
     BD[(BD)]
     Controle --> Modelo
     Modelo --> RepositórioBD
-    Repositório --> BD
+    RepositórioBD --> BD
 ```
 
 Ou seja, o código SQL que hoje está implementado nas funções de 
@@ -74,7 +74,7 @@ algumas poucas perguntas e será utilizado apenas quando o Modelo for chamado pe
 ```mermaid
 flowchart LR
     BD[(BD)]
-    Teste de Unidade -> Modelo
+    TesteUnidade --> Modelo
     Modelo --> RepositórioMemória
     RepositórioMemória --> BD
 ```
