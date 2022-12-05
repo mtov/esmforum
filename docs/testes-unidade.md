@@ -2,7 +2,7 @@
 
 Na versão atual do ESM Forum, implementamos um teste de unidade para a função `listar_perguntas` da camada de Modelo.
 
-Ele foi implementado usando o Jest e está no arquivo [listar_perguntas.test.js](../testes/listar_pergunta.test.js).
+Ele foi implementado usando o Jest e está no arquivo [listar_perguntas.test.js](../testes/listar_perguntas.test.js).
 
 Para executar o teste, basta digitar na pasta raiz:
 
@@ -17,7 +17,7 @@ A implementação de [listar_perguntas](../modelo.js) faz duas coisas:
 
 Então, no teste de unidade, nós realizamos o **mock** de:
 
-* `queryAll` para retornar sempre uma lista conhecida e fixa de respostas.
+* `queryAll` para retornar sempre uma lista com respostas conhecidas.
 * `query` para retornar os valores 5, 10 e 15, nessa ordem. 
 
 ### Exercício
@@ -60,23 +60,22 @@ flowchart LR
     RepositórioBD --> BD
 ```
 
-Ou seja, o código SQL que hoje está implementado nas funções de 
+Assim, o código SQL que hoje está implementado nas funções de 
 Modelo seria movido para funções da camada de Repositório.
 
 ### Qual a vantagem de usar Repositórios?
 
 Repositórios facilitam a escrita de testes de unidade, pois 
-podemos criar um novo tipo de repositório que sempre manipula e recupera dados em memória principal. Sendo mais específico, 
+podemos criar um novo tipo de repositório que manipula e recupera dados em memória principal. Sendo mais específico, 
 teríamos dois tipos de repositórios: `RepositoriBD` e
 `RepositorioMemória`, sendo que esse última manipula apenas 
-algumas poucas perguntas e será utilizado apenas quando o Modelo for chamado pelos testes de unidade.
+algumas poucas perguntas e será utilizado quando o Modelo for chamado pelos testes de unidade.
 
 ```mermaid
 flowchart LR
     BD[(BD)]
     TesteUnidade --> Modelo
     Modelo --> RepositórioMemória
-    RepositórioMemória --> BD
 ```
 
 
