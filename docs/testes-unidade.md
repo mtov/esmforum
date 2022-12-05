@@ -57,7 +57,7 @@ flowchart LR
     BD[(BD)]
     Controle --> Modelo
     Modelo --> RepositórioBD
-    Repositório --> BD
+    RepositórioBD --> BD
 ```
 
 Ou seja, o código SQL que hoje está implementado nas funções de 
@@ -75,7 +75,7 @@ for chamado pelos testes de unidade.
 ```mermaid
 flowchart LR
     BD[(BD)]
-    Teste de Unidade -> Modelo
+    TesteUnidade --> Modelo
     Modelo --> RepositórioMemória
     RepositórioMemória --> BD
 ```
