@@ -17,8 +17,10 @@ A implementação de [listar_perguntas](../modelo.js) faz duas coisas:
 
 Então, no teste de unidade, nós realizamos o **mock** de:
 
-* `queryAll` para retornar sempre uma lista com respostas conhecidas.
-* `query` para retornar os valores 5, 10 e 15, nessa ordem. 
+* `bd.queryAll()` para retornar sempre uma lista com respostas conhecidas.
+* `bd.query()` para retornar os valores 5, 10 e 15, nessa ordem. Veja que 
+`listar_perguntas` chama `get_num_respostas`, que chama `query` para
+retornar o número de respostas de uma determinada pergunta.
 
 ### Exercício
 
@@ -45,12 +47,16 @@ oferece funções de mais alto nível para acessar um banco de dados
 Por exemplo, poderíamos criar um repositório de perguntas 
 com as seguintes funções:
 
-* findAll: retorna uma lista com dados de todas as perguntas.
-* find(id_pergunta): retorna dados de uma pergunta específica.
-* insert(): insere uma pergunta no banco de dados.
-* etc
+````javascript
+recuperar_todas_perguntas(); 
+recuperar_pergunta(id_pergunta);
+recuperar_todas_respostas (id_pergunta);
+recuperar_num_respostas(id_pergunta);
+criar_pergunta(texto);
+criar_resposta(id_pergunta, texto);
+````
 
-Veja então que funcionaria assim:
+Então teríamos a seguinte sequência de chamadas:
 
 ```mermaid
 flowchart LR
@@ -61,27 +67,30 @@ flowchart LR
 ```
 
 Assim, o código SQL que hoje está implementado nas funções de 
-Modelo seria movido para funções da camada de Repositório.
+Modelo seria movido para funções semelhantes da camada de Repositório.
 
 ### Qual a vantagem de usar Repositórios?
 
 Repositórios facilitam a escrita de testes de unidade, pois 
 podemos criar um novo tipo de repositório que manipula e recupera dados em memória principal. Sendo mais específico, 
-teríamos dois tipos de repositórios: `RepositoriBD` e
+teríamos dois tipos de repositórios: `RepositórioBD` e
 `RepositorioMemória`, sendo que esse última manipula apenas 
 algumas poucas perguntas e será utilizado quando o Modelo for chamado pelos testes de unidade.
 
 ```mermaid
 flowchart LR
-    BD[(BD)]
     TesteUnidade --> Modelo
     Modelo --> RepositórioMemória
 ```
 
+Veja que na figura acima não existe mais BD, pois nosso objetivo é 
+implementar de forma mais fácil um teste de unidade.
 
 ### Exercício
 
 Implemente uma camada de Repositório no ESM Forum, com os dois 
-tipos de repositório que mencionamos acima: `RepositoriBD` e `RepositorioMemoria`. Neste último, você pode implementar as 
-funções manualmente, isto é, sem usar mocks. Por fim, 
-reimplemente o teste de unidade para usar essa camada.
+tipos de repositório que mencionamos acima: `RepositorioBD` e `RepositorioMemoria`:
+*  Ambos os repositórios vão implementar as funções que mencionamos acima. Porém, algumas implementações podem ser vazias, caso não sejam necessárias no testes.
+* As implementações de `RepositorioBD` vão usar SQL.
+* As implementações de `RepositorioMemoria` vão usar uma lista conhecida de perguntas, armazenadas em memória principal (de forma bem parecida com a implementação do [teste de unidade atual](../testes/listar_perguntas.test.js)). 
+* Por fim, no modelo, modifique a função [reconfig_bd](../modelo.js) para reconfigurar o repositório usado pelo modelo (e não mais o BD). Ou seja, essa função deve passar a ter o nome `reconfig_repositorio`.

@@ -24,11 +24,9 @@ mock_bd.queryAll = jest.fn().mockReturnValue(
   ]
 );
 
-// Define função mockada de bd.queryAll.
-// Quando "listar_perguntas" realizar uma query para obter
-// o número de respostas de qualquer pergunta, o resultado será
-// um objeto com um contador de respostas igual a 5, 10 e 15,
-// respectivamente para cada chamada
+// "listar_perguntas" chama "get_num_respostas", que chama "query". 
+// Assim, o resultado de "query" será um objeto com um contador de 
+// respostas igual a 5, 10 e 15, respectivamente para cada chamada
 mock_bd.query = jest.fn()
   .mockReturnValue({ 'count(*)': 0 })       // todas chamadas
   .mockReturnValueOnce({ 'count(*)': 5 })   // exceto, 1a chamada
