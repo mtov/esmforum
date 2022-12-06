@@ -13,7 +13,7 @@ Para executar o teste, basta digitar na pasta raiz:
 A implementação de [listar_perguntas](../modelo.js) faz duas coisas:
 
 * Chama a função `queryAll` para recuperar todas as perguntas cadastradas no sistema. Veja que para isso `queryAll` acessa o BD.
-* Depois, para cada pergunta, chama a função `query` para recuperar seu número de respostas. Em seguida, essa informação é adicionada na lista de perguntas que será retornada.
+* Depois, para cada pergunta, chama a função `get_num_respostas` para recuperar seu número de respostas. Em seguida, essa informação é adicionada na lista de perguntas que será retornada.
 
 Então, no teste de unidade, nós realizamos o **mock** de:
 
@@ -32,7 +32,7 @@ em `listar_perguntas` e que está sendo testada?
 
 ## Criando uma Camada de Repositórios
 
-No teste de unidade explicado acima, "mockamos" diretamente
+No teste de unidade explicado acima, "mockamos" as
 funções de acesso ao banco de dados. O problema dessa solução é que 
 `queryAll` e `query` podem ser usadas por outras funções da 
 camada de Modelo. Por exemplo, como "mockamos" `query` para atender
@@ -74,7 +74,7 @@ Modelo seria movido para funções semelhantes da camada de Repositório.
 Repositórios facilitam a escrita de testes de unidade, pois 
 podemos criar um novo tipo de repositório que manipula e recupera dados em memória principal. Sendo mais específico, 
 teríamos dois tipos de repositórios: `RepositórioBD` e
-`RepositorioMemória`, sendo que esse última manipula apenas 
+`RepositórioMemória`, sendo que esse última manipula apenas 
 algumas poucas perguntas e será utilizado quando o Modelo for chamado pelos testes de unidade.
 
 ```mermaid
@@ -92,5 +92,5 @@ Implemente uma camada de Repositório no ESM Forum, com os dois
 tipos de repositório que mencionamos acima: `RepositorioBD` e `RepositorioMemoria`:
 *  Ambos os repositórios vão implementar as funções que mencionamos acima. Porém, algumas implementações podem ser vazias, caso não sejam necessárias no testes.
 * As implementações de `RepositorioBD` vão usar SQL.
-* As implementações de `RepositorioMemoria` vão usar uma lista conhecida de perguntas, armazenadas em memória principal (de forma bem parecida com a implementação do [teste de unidade atual](../testes/listar_perguntas.test.js)). 
+* As implementações de `RepositorioMemoria` vão usar uma lista conhecida de perguntas, armazenadas em memória principal (de forma parecida com a implementação [atual](../testes/listar_perguntas.test.js) do teste de unidade). 
 * Por fim, no modelo, modifique a função [reconfig_bd](../modelo.js) para reconfigurar o repositório usado pelo modelo (e não mais o BD). Ou seja, essa função deve passar a ter o nome `reconfig_repositorio`.
