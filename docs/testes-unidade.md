@@ -96,5 +96,5 @@ Implemente uma camada de Repositório no ESM Forum, com os dois
 tipos de repositório que mencionamos acima: `RepositorioBD` e `RepositorioMemoria`. Seguem algumas dicas:
 *  Ambos os repositórios vão implementar as funções que mencionamos anteriormente. Porém, algumas implementações podem ser vazias, caso não sejam necessárias no teste.
 * As implementações de `RepositorioBD` vão usar SQL.
-* As implementações de `RepositorioMemoria` vão usar uma lista conhecida de perguntas, armazenadas em memória principal (de forma parecida com a implementação [atual](../testes/listar_perguntas.test.js) do teste de unidade). 
+* As implementações de `RepositorioMemoria` vão usar uma lista conhecida de perguntas, armazenadas em memória principal (de forma parecida com a implementação [atual](../testes/listar_perguntas.test.js) do teste de unidade). Por outro lado, não há necessidade de usar mocks criados pelo Jest na implementação de `RepositorioMemoria`.
 * No modelo, modifique a função [reconfig_bd](../modelo.js) para reconfigurar o repositório usado pelo modelo (e não mais o BD). Ou seja, essa função deve passar a ter o nome `reconfig_repositorio`.
