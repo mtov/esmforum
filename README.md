@@ -9,7 +9,11 @@ Ele é um fórum simples de perguntas e respostas. O objetivo é permitir que os
 
 ![Primeiro screenshot](docs/screen1.png)
 
-## Tecnologias
+## Tecnologias do Frontend
+
+O frontend está implementado no seguinte [repositório](https://github.com/mtov/esmforum-react).
+
+## Tecnologias do Backend
 
 O sistema é implementado em JavaScript, usando:
 
