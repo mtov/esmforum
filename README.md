@@ -6,7 +6,7 @@ Ele é um fórum simples de perguntas e respostas. O objetivo é permitir que os
 * Trata-se de um sistema com objetivo didático e, por isso, não temos a intenção de colocá-lo em produção. 
 * Também não temos a intenção de implementar um sistema completo, com todas as funcionalidades possíveis.
 
- # Frontend
+## Frontend
  
 A interface do sistema é também muito simples, conforme  mostrado abaixo. 
 
