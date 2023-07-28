@@ -14,9 +14,9 @@ A interface do sistema é também muito simples, conforme  mostrado abaixo.
 
 O frontend está implementado, usando React, em um [repositório](https://github.com/mtov/esmforum-react) separado.
 
-## Tecnologias
+## Backend
 
-O backend do sistema é implementado em JavaScript, usando:
+O backend do sistema, que está neste repositório, usa JavaScript e também as seguintes tecnologias:
 
   * [Bootstrap](https://getbootstrap.com), um framework para construção de interfaces Web em HTML e CSS.
   * [Node.js](https://nodejs.org/en), um sistema que permite a execução de programas JavaScript fora de browsers, isto é, em servidores.
@@ -24,7 +24,7 @@ O backend do sistema é implementado em JavaScript, usando:
   * [SQLite](https://www.sqlite.org), um banco de dados relacional simples.
   * [Jest](https://jestjs.io/), um framework para implementação de testes de unidade e de integração.
 
-## Instalação e Execução
+### Instalação e Execução do Backend
 
 Veja neste [link](docs/instalacao.md).
 
