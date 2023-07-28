@@ -2,17 +2,20 @@ const express = require('express')
 const modelo = require('./modelo.js');
 
 const app = express()
-app.use(express.urlencoded({ extended: true }))
-app.use(express.static('public'));
-app.set('views', './visao');
-app.set('view engine', 'ejs');
+app.use(express.json());
+
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  next();
+});
+
 
 app.get('/', (req, res) => {
   try {
     const perguntas = modelo.listar_perguntas();
-    res.render('index', {
-      perguntas: perguntas
-    });
+    res.send(perguntas);
   }
   catch(erro) {
     res.status(500).json(erro.message); 
@@ -21,20 +24,20 @@ app.get('/', (req, res) => {
 
 app.post('/perguntas', (req, res) => {
   try {
-    modelo.cadastrar_pergunta(req.body.pergunta);
-    res.render('pergunta-sucesso');
+    const id_pergunta = modelo.cadastrar_pergunta(req.body.pergunta);
+    res.json({id_pergunta: id_pergunta});
   }
   catch(erro) {
     res.status(500).json(erro.message); 
   } 
 });
 
-app.get('/respostas', (req, res) => {
-  const id_pergunta = req.query.id_pergunta;
+app.get('/respostas/:id_pergunta', (req, res) => {
+  const id_pergunta = req.params.id_pergunta;
   const pergunta = modelo.get_pergunta(id_pergunta);
   const respostas = modelo.get_respostas(id_pergunta);
   try {
-    res.render('respostas', {
+    res.json({
       pergunta: pergunta,
       respostas: respostas
     });
@@ -49,9 +52,7 @@ app.post('/respostas', (req, res) => {
     const id_pergunta = req.body.id_pergunta;
     const resposta = req.body.resposta;
     modelo.cadastrar_resposta(id_pergunta, resposta);
-    res.render('resposta-sucesso', {
-      id_pergunta: id_pergunta
-    });
+    res.json({ok:true});
   }
   catch(erro) {
     res.status(500).json(erro.message); 
@@ -59,7 +60,7 @@ app.post('/respostas', (req, res) => {
 });
 
 // espera e trata requisições de clientes
-const port = 3000;
+const port = 5000;
 app.listen(port, 'localhost', () => {
   console.log(`ESM Forum rodando na porta ${port}`)
 });

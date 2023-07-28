@@ -15,7 +15,7 @@ function queryAll(query, params) {
 }
 
 function exec(statement, params) {
-  bd.prepare(statement).run(params);
+  return bd.prepare(statement).run(params);
 }
 
 exports.reconfig = reconfig;
