@@ -1,4 +1,4 @@
-# Instalação 
+# Instalação do Backend
 
 Primeiro, clone o repositório:
 
@@ -6,28 +6,22 @@ Primeiro, clone o repositório:
 
 Em seguida, instale a versão mais recente do Node.js. Mais informações [aqui](https://nodejs.org/en/download).
 
-Instale também as seguintes dependências:
+Instale também as dependências do projeto:
 
 ```console
-npm install better-sqlite3
-npm install --save-dev jest
+npm install 
 ```
-Você precisará instalar também o ```sqlite3```. Verifique no site da sua distribuição qual é o pacote apropriado para isso. Por exemplo, para distribuições Debian, fazemos apenas:
+Por fim, você precisará instalar também o ```sqlite3```. Verifique no site da sua distribuição qual é o pacote apropriado para isso. Por exemplo, para distribuições Debian, fazemos apenas:
 
 ```console
 sudo apt install sqlite3
 ```
 
-# Execução 
+# Execução do Backend
 
 Para executar o servidor, digite no diretório raiz:
 
 ``` node server.js```
-
-Para acessar o sistema, abra a seguinte URL no browser:
-
-``` http://localhost:3000 ```
-
 
 Se em algum momento você quiser "zerar" o banco de dados do sistema, você pode usar:
 
