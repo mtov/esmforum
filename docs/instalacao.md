@@ -29,3 +29,7 @@ Se em algum momento você quiser "zerar" o banco de dados do sistema, você pode
 cd bd
 ./criar_bd.sh
 ```
+
+# Instalação e Execução do Frontend
+
+Veja informações neste [repositório](https://github.com/mtov/esmforum-react).
