@@ -1,4 +1,4 @@
-# Instalação do Backend
+## Instalação do Backend
 
 Primeiro, clone o repositório:
 
@@ -17,7 +17,7 @@ Por fim, você precisará instalar também o ```sqlite3```. Verifique no site da
 sudo apt install sqlite3
 ```
 
-# Execução do Backend
+## Execução do Backend
 
 Para executar o servidor, digite no diretório raiz:
 
@@ -30,6 +30,6 @@ cd bd
 ./criar_bd.sh
 ```
 
-# Instalação e Execução do Frontend
+## Instalação e Execução do Frontend
 
 Veja informações neste [repositório](https://github.com/mtov/esmforum-react).
