@@ -76,10 +76,10 @@ O [EJS](https://ejs.co) é uma biblioteca usada para pré-processar o código Ja
 }
 ```
 
-* ``POST /respostas``: usado para cadastrar uma resposta para uma pergunta. Devem ser enviado um documento JSON tal como neste exemplo:
+* ``POST /respostas``: usado para cadastrar uma resposta para uma pergunta. Deve ser enviado um documento JSON tal como neste exemplo:
 
 ```
-{ id_pergunta: '6', resposta: '2' }
+{ id_pergunta: '6', resposta: 'O resultado é 2' }
 ```
 
 ## Exercício
