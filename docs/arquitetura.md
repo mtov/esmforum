@@ -8,7 +8,13 @@ A seguinte figura descreve a arquitetura do sistema:
 ```mermaid
 flowchart LR
     BD[(BD)]
-    Visão/Browser <--> Controlador <--> Modelo  <--> BD 
+    subgraph Browser
+    Visão
+    end
+    subgraph Servidor
+       Controlador <--> Modelo  <--> BD
+    end
+    Visão <---> Controlador 
 ```
 
 Nessa arquitetura, temos os seguintes componentes:
