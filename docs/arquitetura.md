@@ -46,14 +46,41 @@ O [EJS](https://ejs.co) é uma biblioteca usada para pré-processar o código Ja
 
  A API REST do controlador (implementada usado o Express) oferece os seguintes endpoints:
 
-* ``GET /``: usado para obter as perguntas da página principal do ESM Forum. O resultado é um documento JSON com dados sobre cada uma das perguntas cadastradas no sistema.
+* ``GET /``: usado para obter as perguntas da página principal do ESM Forum. O resultado é um documento JSON com uma lista das perguntas cadastradas no sistema. Segue um exemplo dos campos deste documento:
 
-* ``POST /perguntas``: usado para cadastrar uma pergunta. Ou seja, esse endpoint é usado para enviar informações da Visão para o servidor. O texto propriamente dito da pergunta é enviado em um campo, chamado `pergunta`, de um documento JSON.
+```
+{
+  id_pergunta: 1,
+  texto: 'Como eu faço para remover um determinado elemento de um array em JavaScript?',
+  id_usuario: 1,
+  num_respostas: 2
+}
+```
 
-* ``GET /respostas/?id_pergunta=n``: usado para obter as respostas de uma pergunta cujo identificador é `n`. O resultado é documento JSON com dois registros principais: `pergunta` (com dados da pergunta) e `resposta` (uma lista com dados de cada um das respostas).
 
-* ``POST /respostas``: usado para cadastrar uma resposta para uma pergunta.
-Devem ser enviados dois parâmetros em um documento JSON: `id_pergunta` (isto é, o id da pergunta que estamos respondendo) e `resposta` (com o texto da resposta).
+* ``POST /perguntas``: usado para cadastrar uma pergunta. Ou seja, esse endpoint é usado para enviar informações da Visão para o servidor. A pergunta a ser cadastrada é enviada em um documento JSON como neste exemplo:
+
+```
+{ pergunta: 'Quanto é 2 + 2?' }
+```
+
+* ``GET /respostas/?id_pergunta=n``: usado para obter as respostas de uma pergunta cujo identificador é `n`. O resultado é documento JSON como o seguinte:
+
+```
+{
+  pergunta: { id_pergunta: 6, texto: 'Quanto é 2 + 2?', id_usuario: 1 },
+  respostas: [
+    { id_resposta: 3, id_pergunta: 6, texto: '4' },
+    { id_resposta: 7, id_pergunta: 6, texto: '5' }
+  ]
+}
+```
+
+* ``POST /respostas``: usado para cadastrar uma resposta para uma pergunta. Devem ser enviado um documento JSON tal como neste exemplo:
+
+```
+{ id_pergunta: '6', resposta: '2' }
+```
 
 ## Exercício
 
