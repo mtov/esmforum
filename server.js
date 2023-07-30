@@ -11,7 +11,6 @@ app.use((req, res, next) => {
   next();
 });
 
-
 app.get('/', (req, res) => {
   try {
     const perguntas = modelo.listar_perguntas();
@@ -51,8 +50,8 @@ app.post('/respostas', (req, res) => {
   try {
     const id_pergunta = req.body.id_pergunta;
     const resposta = req.body.resposta;
-    modelo.cadastrar_resposta(id_pergunta, resposta);
-    res.json({ok:true});
+    const id_resposta = modelo.cadastrar_resposta(id_pergunta, resposta);
+    res.json({id_resposta: id_resposta});
   }
   catch(erro) {
     res.status(500).json(erro.message); 

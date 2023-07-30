@@ -18,7 +18,6 @@ O frontend está implementado, usando React, em um [repositório](https://github
 
 O backend do sistema, que está neste repositório, usa JavaScript e também as seguintes tecnologias:
 
-  * [Bootstrap](https://getbootstrap.com), um framework para construção de interfaces Web em HTML e CSS.
   * [Node.js](https://nodejs.org/en), um sistema que permite a execução de programas JavaScript fora de browsers, isto é, em servidores.
   * [Express](https://expressjs.com), uma biblioteca para construção de aplicações Web em Node.js.
   * [SQLite](https://www.sqlite.org), um banco de dados relacional simples.

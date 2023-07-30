@@ -26,7 +26,8 @@ function cadastrar_pergunta(texto) {
 
 function cadastrar_resposta(id_pergunta, texto) {
   const params = [id_pergunta, texto];
-  bd.exec('INSERT INTO respostas (id_pergunta, texto) VALUES(?, ?)', params);
+  const result = bd.exec('INSERT INTO respostas (id_pergunta, texto) VALUES(?, ?) RETURNING id_resposta', params);
+  return result.lastInsertRowid;
 }
 
 function get_pergunta(id_pergunta) {
