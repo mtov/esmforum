@@ -27,7 +27,7 @@ Para saber mais sobre esses diagramas, recomendamos o [Capítulo 4](https://engs
 	end  
         modelo-->>server: perguntas, num_respostas
         deactivate modelo
-	server-->>browser: index
+	server-->>browser: json
 	deactivate server
 	deactivate browser
 ```	
@@ -47,7 +47,7 @@ Para saber mais sobre esses diagramas, recomendamos o [Capítulo 4](https://engs
         deactivate bd_utils
         modelo-->>server: return
         deactivate modelo
-	server-->>browser: pergunta-sucesso
+	server-->>browser: json
 	deactivate server
 	deactivate browser
 ```	
@@ -75,7 +75,7 @@ Para saber mais sobre esses diagramas, recomendamos o [Capítulo 4](https://engs
         deactivate bd_utils
         modelo-->>server: respostas
         deactivate modelo
-	server-->>browser: respostas
+	server-->>browser: json
 	deactivate server
 	deactivate browser
 ```	
