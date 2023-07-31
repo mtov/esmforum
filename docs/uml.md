@@ -45,7 +45,7 @@ Para saber mais sobre esses diagramas, recomendamos o [Capítulo 4](https://engs
         activate bd_utils
         bd_utils-->>modelo: return
         deactivate bd_utils
-        modelo-->>server: return
+        modelo-->>server: id_pergunta
         deactivate modelo
 	server-->>browser: json
 	deactivate server
