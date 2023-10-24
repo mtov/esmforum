@@ -35,7 +35,7 @@ Para ver a cobertura dos testes, digite:
 ## Exercício
 
 Após o rodar o comando acima, você vai perceber que a cobertura 
-de comandos (Stmts) do arquivo `modelo.js` é de 78.94%.
+de comandos (Stmts) do arquivo `modelo.js` é de 78.26%.
 
 Implemente então um ou mais casos de testes, sempre no 
 arquivo [modelo.test.js](../testes/modelo.test.js), de forma que 
