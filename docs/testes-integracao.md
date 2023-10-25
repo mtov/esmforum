@@ -15,10 +15,12 @@ dados, conforme ilustrado a seguir:
 ```mermaid
 flowchart LR
     BD[(BD)]
-    Browser <--> Controlador <--> Modelo
-    Controlador <--> Visão
-    subgraph testes de integração
-    Modelo  <--> BD 
+    Frontend  <--->|json| Controlador
+    subgraph backend
+       Controlador <--> Modelo
+       subgraph testes de integração
+          Modelo  <--> BD 
+       end
     end
 ```
 
