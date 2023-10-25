@@ -9,9 +9,11 @@ consulte o
 flowchart LR
     BD[(BD)]
      subgraph Testes E2E
-    Browser <--> Controlador <--> Modelo
-    Controlador <--> Visão
-    Modelo  <--> BD 
+        Frontend <--> Controlador
+        subgraph backend
+           Controlador <--> Modelo
+           Modelo  <--> BD
+        end 
     end
 ```
 
