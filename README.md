@@ -30,9 +30,7 @@ Veja neste [link](docs/instalacao.md).
 ## Praticando o Conteúdo do Livro
 
 * [Histórias de Usuários e Backlog](docs/backlog.md)
-<!---
 * [Arquitetura MVC](docs/arquitetura.md)
---->
 * [Diagramas de Sequência](docs/uml.md)
 * Testes:
   * [Testes de Unidade](docs/testes-unidade.md)
