@@ -22,52 +22,26 @@ diagrama análogo para [testes de integração](./testes-integracao.md).
 
 ## Implementação
 
-Os testes end-to-end do ESM Forum são implementados usando-se o 
-Cypress e estão em dois arquivos:
+Atualmente, o ESM Forum possui um teste end-to-end, implementado no seguinte arquivo.
 
-* [spec1.js](../testes/cypress/integration/spec1.js): um teste usado 
-apenas para checar se a execução do Cypress está ocorrendo com sucesso.
-
-* [spec2.js](../testes/cypress/integration/spec2.js): um teste mais 
-real e que testa o cadastro de uma pergunta.
+* [spec2.js](../testes/e2e/cypress/e2e/spec.cy.js): testa o cadastro de uma pergunta.
 
 ## Executando os testes end-to-end
 
-Como o Cypress é uma ferramenta mais complexa e com diversas 
-dependências, iremos executá-la por meio de um container Docker.
+1. Primeiro, você deve instalar o Cypress, conforme descrito [aqui](https://docs.cypress.io/guides/getting-started/installing-cypress).
 
-Ou seja, você primeiro terá que instalar o Docker, conforme 
-descrito [aqui](https://docs.docker.com/get-docker/).
+   Veja que você pode instalar o Cypress como um pacote do npm/node.js. Ou então, pode instalar uma versão nativa do seu sistema operacional, conforme descrito [aqui](https://docs.cypress.io/guides/getting-started/installing-cypress#Direct-download). Esaa segunda alternativa pode ser mais simples e rápida, caso não tenha experiência com npm e node.js
 
-Feito isso, coloque o servidor no ar, com um banco de dados 
-pré-configurado para o teste:
+2. Em seguida, execute o Cypress (por exemplo, clicando em cypress.exe, caso tenha feito uma instalação local).
 
-```
-cd bd
-rm esmforum.db
-cp esmforum-original.db esmforum.db
-cd ..
-node server
-```
+3. Primeiro, você vai ter que abrir um projeto que está no seguinte diretório: ``testes/e2e''
 
-Em seguida, abra um outro terminal para executar os testes E2E:
+   Ou seja, informe o diretório acima para o Cypress. Para ter certeza de que está informando o diretório certo, ele é o diretório que contem o arquivo `cypress.config.js`.
 
-```
-cd testes
-./run-cypress.sh
-```
+4. Depois, abra o projeto que foi criado pelo Cypress e informe que deseja executar testes E2E, usando o browser Chrome.
 
-Esse script executa um container Docker com uma imagem do Cypress. 
-A primeira execução irá demorar um pouco, pois a imagem tem que ser baixada.
-
-Evidentemente, é interessante analisar a saída gerada pelo Cypress. 
-Mas, o mais importante é a mensagem final: 
-
-> All tests passed!
-
+5. O Cypress vai abrir uma tela com os testes existentes, no nosso caso apenas `spec.cy.js`. Você poderá então pedir para executar esse teste e ver o seu resultado.
+   
 ## Exercício
 
-Implemente um terceiro teste end-to-end. Por exemplo, você pode testar
-agora o cadastro de uma resposta. Implemente o seu teste em um arquivo 
-chamado ``spec3.js`` e salve-o na mesma pasta dos testes anteriores. 
-Assim, o nosso script irá executá-lo automaticamente ao ser chamado.
+Implemente um segundo teste end-to-end para testar o cadastro de uma resposta. Implemente o seu teste em um arquivo chamado ``spec2.cy.js``.
