@@ -30,18 +30,18 @@ Atualmente, o ESM Forum possui um teste end-to-end, implementado no seguinte arq
 
 1. Primeiro, você deve instalar o Cypress, conforme descrito [aqui](https://docs.cypress.io/guides/getting-started/installing-cypress).
 
-   Veja que você pode instalar o Cypress como um pacote do npm/node.js. Ou então, pode instalar uma versão nativa do seu sistema operacional, conforme descrito [aqui](https://docs.cypress.io/guides/getting-started/installing-cypress#Direct-download). Esaa segunda alternativa pode ser mais simples e rápida, caso não tenha experiência com npm e node.js
+   Veja que você pode instalar o Cypress como um pacote do npm/node.js. Ou então, pode instalar uma versão nativa do seu sistema operacional, conforme descrito [aqui](https://docs.cypress.io/guides/getting-started/installing-cypress#Direct-download). Essa segunda alternativa pode ser mais simples e rápida, caso não tenha experiência com npm e node.js
 
-2. Em seguida, execute o Cypress (por exemplo, clicando em cypress.exe, caso tenha feito uma instalação local).
+2. Em seguida, execute o Cypress (por exemplo, clicando em `cypress.exe`, caso tenha feito uma instalação local).
 
-3. Primeiro, você vai ter que abrir um projeto que está no seguinte diretório: ``testes/e2e''
+3. Então, você vai ter que abrir o projeto Cypress que está no seguinte diretório do ESM Forum: `testes/e2e`
 
-   Ou seja, informe o diretório acima para o Cypress. Para ter certeza de que está informando o diretório certo, ele é o diretório que contem o arquivo `cypress.config.js`.
+   Ou seja, informe o diretório acima para o Cypress. Para ter certeza de que está informando o diretório correto, ele é o diretório que possui o arquivo `cypress.config.js`.
 
-4. Depois, abra o projeto que foi criado pelo Cypress e informe que deseja executar testes E2E, usando o browser Chrome.
+4. Depois, abra o projeto criado pelo Cypress e informe que deseja executar testes E2E, usando o browser Chrome.
 
-5. O Cypress vai abrir uma tela com os testes existentes, no nosso caso apenas `spec.cy.js`. Você poderá então pedir para executar esse teste e ver o seu resultado.
+5. O Cypress vai abrir uma tela com os testes existentes, no nosso caso apenas `spec.cy.js`. Você poderá então executar esse teste e ver o seu resultado.
    
 ## Exercício
 
-Implemente um segundo teste end-to-end para testar o cadastro de uma resposta. Implemente o seu teste em um arquivo chamado ``spec2.cy.js``.
+Implemente um segundo teste end-to-end para testar o cadastro de uma resposta. Implemente esse teste em um arquivo chamado ``spec2.cy.js``.
