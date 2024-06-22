@@ -36,7 +36,7 @@ Para ver a cobertura dos testes, digite:
 
 ``npm test -- --coverage`` 
 
-Para ver o relatório de cobertura, abra o seguinte arquivo:
+Para ver o relatório de cobertura, abra o arquivo:
 
 `coverage/lcov-report/index.html`
 
