@@ -26,7 +26,7 @@ flowchart LR
 
 ## Executando os testes de integração
 
-Primeiro, certifique-se de que instalou o backend do sistema, conforme explicado [aqui](./instalacao.md).
+Primeiro, certifique-se de que instalou o backend do sistema, conforme explicado [aqui](./instalacao.md). Basta ter instalado o backend, isto é, não precisa rodar o servidor do lado backend.
 
 Depois, digite na pasta raiz do projeto:
 
