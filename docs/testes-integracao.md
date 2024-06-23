@@ -26,7 +26,11 @@ flowchart LR
 
 ## Executando os testes de integração
 
-Primeiro, certifique-se de que instalou o backend do sistema, conforme explicado [aqui](./instalacao.md). Basta ter instalado o backend, isto é, não precisa rodar o servidor do lado backend.
+Primeiro, certifique-se de que instalou o backend do sistema, conforme explicado [aqui](./instalacao.md). 
+
+Basta instalar o backend, isto é, para fins exclusivos deste teste, você não precisa 
+rodar o servidor do lado backend. O motivo é que o teste vai testar apenas as funções
+da camada de Modelo e o acesso delas ao banco de dados (veja figura acima)
 
 Depois, digite na pasta raiz do projeto:
 
