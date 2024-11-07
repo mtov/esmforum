@@ -44,6 +44,8 @@ Para ver o relatório de cobertura, abra o arquivo:
 
 `coverage/lcov-report/index.html`
 
+Caso deseje, também é possível ver a cobertura no próprio código pela IDE. Pra isso, basta adicionar alguma extensão compatível. Um exemplo, para o VSCode, é a [Coverage Gutters](https://marketplace.visualstudio.com/items?itemName=ryanluker.vscode-coverage-gutters), que marca no próprio arquivos os trechos de código cobertos e os não cobertos pelos testes.
+
 ## Exercício
 
 Após o rodar o comando acima, você vai perceber que a cobertura 
